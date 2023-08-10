@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="INSERT_OR_UPDATE">
+        <order>100</order>
+        <sc_cat_item display_value="APi Connect Development Request">9de611041b7f701062e50ed2cd4bcbdd</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2021-11-08 15:58:57</sys_created_on>
+        <sys_id>c8a9d1841b7f701062e50ed2cd4bcb90</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Requestor Auto Fill Read Only Func. APi Connect Development Request</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name>io_set_item_c8a9d1841b7f701062e50ed2cd4bcb90</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2023-03-09 20:06:33</sys_updated_on>
+        <variable_set display_value="Requestor Auto Fill Read Only Func">36bf0bc01ba274108c5143f3cc4bcb8b</variable_set>
+    </io_set_item>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</claim_owner_scope>
+        <claim_timestamp>186c7fb7e350000001</claim_timestamp>
+        <metadata_update_name>io_set_item_c8a9d1841b7f701062e50ed2cd4bcb90</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>APi Connect Development Request</previous_claim_name>
+        <previous_claim_scope>a68681601be9a15062e50ed2cd4bcb9f</previous_claim_scope>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2023-03-09 20:06:33</sys_created_on>
+        <sys_id>a9f609241be9a15062e50ed2cd4bcb9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2023-03-09 20:06:33</sys_updated_on>
+    </sys_claim>
+</record_update>

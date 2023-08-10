@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="APi Connect Development Request">9de611041b7f701062e50ed2cd4bcbdd</catalog_item>
+        <catalog_variable>IO:e5aace441bb3b01062e50ed2cd4bcb69</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>ignore</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2021-11-08 19:39:10</sys_created_on>
+        <sys_id>800c86081bb3b01062e50ed2cd4bcb09</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>custom_scheduled_task_rctask</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_800c86081bb3b01062e50ed2cd4bcb09</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2023-03-09 20:07:07</sys_updated_on>
+        <table/>
+        <ui_policy display_value="if type is scheduled task">f0ff2d841b33b01062e50ed2cd4bcb6e</ui_policy>
+        <variable>custom_scheduled_task_rctask</variable>
+        <variable_set/>
+        <visible>true</visible>
+    </catalog_ui_policy_action>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</claim_owner_scope>
+        <claim_timestamp>186c7fc05ba0000001</claim_timestamp>
+        <metadata_update_name>catalog_ui_policy_action_800c86081bb3b01062e50ed2cd4bcb09</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>APi Connect Development Request</previous_claim_name>
+        <previous_claim_scope>a68681601be9a15062e50ed2cd4bcb9f</previous_claim_scope>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2023-03-09 20:07:07</sys_created_on>
+        <sys_id>0617cd241be9a15062e50ed2cd4bcb22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2023-03-09 20:07:07</sys_updated_on>
+    </sys_claim>
+</record_update>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="APi Connect Development Request">9de611041b7f701062e50ed2cd4bcbdd</catalog_item>
+        <catalog_variable>IO:eef093841ba274108c5143f3cc4bcb81</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <mandatory>false</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2021-11-08 17:44:49</sys_created_on>
+        <sys_id>94d171881b33b01062e50ed2cd4bcb30</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>approving_manager</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_94d171881b33b01062e50ed2cd4bcb30</sys_update_name>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2023-03-09 20:07:08</sys_updated_on>
+        <table/>
+        <ui_policy display_value="init">36213d081b33b01062e50ed2cd4bcbef</ui_policy>
+        <variable>approving_manager</variable>
+        <variable_set/>
+        <visible>false</visible>
+    </catalog_ui_policy_action>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</claim_owner_scope>
+        <claim_timestamp>186c7fc08610000001</claim_timestamp>
+        <metadata_update_name>catalog_ui_policy_action_94d171881b33b01062e50ed2cd4bcb30</metadata_update_name>
+        <previous_claim_app_version>1.0.0</previous_claim_app_version>
+        <previous_claim_name>APi Connect Development Request</previous_claim_name>
+        <previous_claim_scope>a68681601be9a15062e50ed2cd4bcb9f</previous_claim_scope>
+        <sys_created_by>Terry.Lillo</sys_created_by>
+        <sys_created_on>2023-03-09 20:07:08</sys_created_on>
+        <sys_id>8e17cd241be9a15062e50ed2cd4bcb50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Terry.Lillo</sys_updated_by>
+        <sys_updated_on>2023-03-09 20:07:08</sys_updated_on>
+    </sys_claim>
+</record_update>
