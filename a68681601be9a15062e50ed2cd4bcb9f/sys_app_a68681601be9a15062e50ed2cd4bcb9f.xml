@@ -24,7 +24,7 @@
         <scoped_administration>false</scoped_administration>
         <short_description>Update sla wording on development request</short_description>
         <source>a68681601be9a15062e50ed2cd4bcb9f</source>
-        <store_correlation_id/>
+        <store_correlation_id>REPOAPP0001873313</store_correlation_id>
         <store_url/>
         <subscription_entitlement/>
         <sys_class_name>sys_app</sys_class_name>
@@ -32,15 +32,15 @@
         <sys_created_by>Terry.Lillo</sys_created_by>
         <sys_created_on>2023-03-24 18:29:33</sys_created_on>
         <sys_id>a68681601be9a15062e50ed2cd4bcb9f</sys_id>
-        <sys_mod_count>11</sys_mod_count>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2023-06-08 05:59:24</sys_updated_on>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:46:15</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
         <user_role/>
         <vendor>API Group Inc</vendor>
         <vendor_prefix/>
-        <version>1.0.5</version>
+        <version>1.0.7</version>
     </sys_app>
 </record_update>
