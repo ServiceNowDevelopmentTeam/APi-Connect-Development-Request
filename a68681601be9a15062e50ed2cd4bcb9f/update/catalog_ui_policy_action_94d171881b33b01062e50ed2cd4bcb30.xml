@@ -5,6 +5,8 @@
         <cleared>false</cleared>
         <disabled>ignore</disabled>
         <field/>
+        <field_message/>
+        <field_message_type>none</field_message_type>
         <mandatory>false</mandatory>
         <order>100</order>
         <sys_class_name>catalog_ui_policy_action</sys_class_name>
@@ -18,9 +20,11 @@
         <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
         <sys_update_name>catalog_ui_policy_action_94d171881b33b01062e50ed2cd4bcb30</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2024-06-13 19:47:07</sys_updated_on>
+        <sys_updated_on>2024-09-07 11:48:01</sys_updated_on>
         <table/>
         <ui_policy display_value="init">36213d081b33b01062e50ed2cd4bcbef</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
         <variable>supervisor</variable>
         <variable_set/>
         <visible>false</visible>

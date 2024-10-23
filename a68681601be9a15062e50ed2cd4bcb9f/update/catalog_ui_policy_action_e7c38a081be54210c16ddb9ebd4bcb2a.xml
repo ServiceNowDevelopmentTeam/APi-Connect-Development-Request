@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="APi Connect (ServiceNow) Access Request">88c3d53c1be8c21062e50ed2cd4bcbd5</catalog_item>
+        <catalog_variable>IO:b11759301b2cc21062e50ed2cd4bcbfa</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>false</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-09 03:37:53</sys_created_on>
+        <sys_id>e7c38a081be54210c16ddb9ebd4bcb2a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>assignment_group</sys_name>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_e7c38a081be54210c16ddb9ebd4bcb2a</sys_update_name>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:06:37</sys_updated_on>
+        <table/>
+        <ui_policy display_value="onload - if new assignment group">7c9382081be54210c16ddb9ebd4bcb40</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <variable>assignment_group</variable>
+        <variable_set/>
+        <visible>ignore</visible>
+    </catalog_ui_policy_action>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</claim_owner_scope>
+        <claim_timestamp>192ba583af80000001</claim_timestamp>
+        <metadata_update_name>catalog_ui_policy_action_e7c38a081be54210c16ddb9ebd4bcb2a</metadata_update_name>
+        <previous_claim_app_version>1.0.5</previous_claim_app_version>
+        <previous_claim_name>APi Connect Development Request</previous_claim_name>
+        <previous_claim_scope>a68681601be9a15062e50ed2cd4bcb9f</previous_claim_scope>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:06:37</sys_created_on>
+        <sys_id>952e1fab339196109b1810919e5c7bd9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:06:37</sys_updated_on>
+    </sys_claim>
+</record_update>

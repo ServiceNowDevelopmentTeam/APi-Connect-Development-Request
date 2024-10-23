@@ -1,0 +1,2586 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=15738354000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>do all the actions required PER group</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>api_connect_adddisable_master_subflow</internal_name>
+        <label_cache>[{"name":"94fa7b3e-68dc-4f11-8bc3-5874d11c57dc.Record.owned_by","label":"4 - Look Up Record➛Service Record➛Owned by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci_service","column_name":"owned_by"},{"name":"94fa7b3e-68dc-4f11-8bc3-5874d11c57dc.Record.managed_by","label":"4 - Look Up Record➛Service Record➛Managed by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci_service","column_name":"managed_by"},{"name":"subflow.group.manager","label":"Input➛group➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user_group","column_name":"manager"},{"name":"subflow.user","label":"Input➛user","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"67056301-fbfd-47b4-ab1c-83db9c9bec1c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"flow_variable.approver","label":"Flow Variables➛Approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"5b0ab20c-aa95-453d-b913-3575adb63a4d"}},{"name":"subflow.ritm","label":"Input➛RITM","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"a65ada90-2db3-46c6-a626-75b6ba9b83df","uiTypeLabel":"Reference"}},{"name":"4cd1f581-cdf6-4e01-a733-f4ad529624ef.approval_state","label":"7 - PROF - Ask One to Approve Task - R➛Approval State","reference_display":"Approval State","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"a3903c82-5e05-4799-ba1a-97df8b14de88"}},{"name":"subflow.group.name","label":"Input➛group➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user_group","column_name":"name"},{"name":"subflow.add_remove","label":"Input➛Add/Remove","reference":"","reference_display":"","type":"choice","base_type":"choice","column_name":"","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Add","value":"Add","order":1.0},{"label":"Remove","value":"Remove","order":2.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"cf8055e4-f49c-4d35-a713-943ee8da8e0f","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.group","label":"Input➛group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"702fc47a-9017-4052-b6dc-8fb1f8b6395f","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"0862ba66-aa8a-4299-ac3d-57390db6e394.output_success","label":"13 - add/remove user from group➛output Success","reference_display":"output Success","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"be81444c-92b2-47d3-82d2-707ce5eba3bf"}},{"name":"subflow.start_string","label":"Input➛start string","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"24bca73c-00ac-4848-9375-a2f52a3d7d48","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"flow_variable.approval_state","label":"Flow Variables➛approval state","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"c71bab59-287d-4a52-a69a-a0f633356048"}},{"name":"44928ba4-5c3b-477a-90fa-49ef5efa4a04.Catalog Task","label":"15 - Create Catalog Task➛Catalog Task","reference":"sc_task","reference_display":"Catalog Task","type":"document_id","base_type":"document_id","usedInstances":{"41e9ebd2-4f3c-47d7-82b4-ff69f26bd167":["task"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>852aa1c51bf9865062e50ed2cd4bcbf3</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Api Connect add/Disable Master Subflow</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 13:51:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b7106d451bb9865062e50ed2cd4bcb04</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Api Connect add/Disable Master Subflow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name>sys_hub_flow_b7106d451bb9865062e50ed2cd4bcb04</sys_update_name>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:25</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=b7106d451bb9865062e50ed2cd4bcb04"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b7106d451bb9865062e50ed2cd4bcb04"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</claim_owner_scope>
+        <claim_timestamp>192ba6d65610000001</claim_timestamp>
+        <metadata_update_name>sys_hub_flow_b7106d451bb9865062e50ed2cd4bcb04</metadata_update_name>
+        <previous_claim_app_version>1.0.5</previous_claim_app_version>
+        <previous_claim_name>APi Connect Development Request</previous_claim_name>
+        <previous_claim_scope>a68681601be9a15062e50ed2cd4bcb9f</previous_claim_scope>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:29:44</sys_created_on>
+        <sys_id>40736b2733d196109b1810919e5c7b61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:29:44</sys_updated_on>
+    </sys_claim>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=b7106d451bb9865062e50ed2cd4bcb04"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=b7106d451bb9865062e50ed2cd4bcb04^sys_idNOT IN37106d451bb9865062e50ed2cd4bcb05"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>b7106d451bb9865062e50ed2cd4bcb04</id>
+        <name>Api Connect add/Disable Master Subflow</name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 13:51:26</sys_created_on>
+        <sys_id>37106d451bb9865062e50ed2cd4bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-04-24 13:51:26</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=37106d451bb9865062e50ed2cd4bcb05"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=b7106d451bb9865062e50ed2cd4bcb04^sys_idNOT IN03a1a1c91bb9865062e50ed2cd4bcb8f,7a1a61c51bf9865062e50ed2cd4bcb20,cba1a1c91bb9865062e50ed2cd4bcb85,cfa1a1c91bb9865062e50ed2cd4bcb8a,f21a61c51bf9865062e50ed2cd4bcb1b"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice,uiUniqueId=cf8055e4-f49c-4d35-a713-943ee8da8e0f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>1</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>add_remove</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>Add/Remove</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</model>
+        <model_id>b7106d451bb9865062e50ed2cd4bcb04</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 13:58:13</sys_created_on>
+        <sys_id>03a1a1c91bb9865062e50ed2cd4bcb8f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:34:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=03a1a1c91bb9865062e50ed2cd4bcb8f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=24bca73c-00ac-4848-9375-a2f52a3d7d48</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>start_string</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>start string</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</model>
+        <model_id>b7106d451bb9865062e50ed2cd4bcb04</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:04</sys_created_on>
+        <sys_id>7a1a61c51bf9865062e50ed2cd4bcb20</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:34:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7a1a61c51bf9865062e50ed2cd4bcb20"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=702fc47a-9017-4052-b6dc-8fb1f8b6395f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user_group</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>group</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>group</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</model>
+        <model_id>b7106d451bb9865062e50ed2cd4bcb04</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user_group">sys_user_group</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 13:58:12</sys_created_on>
+        <sys_id>cba1a1c91bb9865062e50ed2cd4bcb85</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:34:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=cba1a1c91bb9865062e50ed2cd4bcb85"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=67056301-fbfd-47b4-ab1c-83db9c9bec1c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>user</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>user</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</model>
+        <model_id>b7106d451bb9865062e50ed2cd4bcb04</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 13:58:13</sys_created_on>
+        <sys_id>cfa1a1c91bb9865062e50ed2cd4bcb8a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:34:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=cfa1a1c91bb9865062e50ed2cd4bcb8a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=a65ada90-2db3-46c6-a626-75b6ba9b83df</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sc_req_item</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>ritm</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>RITM</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</model>
+        <model_id>b7106d451bb9865062e50ed2cd4bcb04</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:04</sys_created_on>
+        <sys_id>f21a61c51bf9865062e50ed2cd4bcb1b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:34:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f21a61c51bf9865062e50ed2cd4bcb1b"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=b7106d451bb9865062e50ed2cd4bcb04"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b7106d451bb9865062e50ed2cd4bcb04"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=b7106d451bb9865062e50ed2cd4bcb04"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=b7106d451bb9865062e50ed2cd4bcb04^sys_idNOT IN6fa463e733d196109b1810919e5c7b01,aba423e733d196109b1810919e5c7bfd,e7a423e733d196109b1810919e5c7bd8"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Catalog Task">af51fd0e73141300612c273ffff6a785</action_type>
+        <action_type_parent display_value="Create Catalog Task">f597c41073081300612c273ffff6a767</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>af51fd0e73141300612c273ffff6a785</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <generation_source/>
+        <order>18</order>
+        <parent_ui_id>9c2fd6e9-9f09-46fb-8c35-3b5490f58d4a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>6fa463e733d196109b1810919e5c7b01</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:40:32</sys_updated_on>
+        <ui_id>9dbe5c2a-b665-44ab-b94e-a43a60044b28</ui_id>
+        <values>H4sIAAAAAAAA/+1Y32/iOBD+V6I83UmITQIFtm+99nqqdNeVStV7WPYix5mAtU6ctR1YDvG/3zhO+A0LKl1xUnljPLa/+Wa+SSafZy6hmonsIVOaZBT6U/UQu9du0vVJx6dXfpR87HWuvE4AVx7EAY3bEY2SyG24zPiR5MpPYg+6Lb/ttzyv4wc06LYS/HVIt9dDv4ykYDxHoSYRh7D833DHhBfGrija1Ve0xEzlnExfthboiPFYQuZef/7ScHMi8QQN0r2ebSwdC4mTCDi6PhtAzqMFtAennubGvGX7c9cZQsYGl9dw4buGLAYElBCuoOGmJIuJFnK6sEgg8aeMo0HLAv+PWKbxQNf4flfsX7y25xm3BDBCCnZt8be8+M5yZpeSO6JJHw+jupCVOx0JRkFZfmJISMH17arNOnzKTRXYLWWo1W7BizR7tMy4iwO2U1Qt3O1LYaEgjCE3lJggKwaS/khMnuqA7llWslctckEJX/wjWksWFdrAnrlMhYpKltdQSye8BjikeEGYkjxn2TDMpRiz8lAMJW0OOf5pJlxMEIxiw6xpq7+JmSHNe7TfleYXIpk5+S88Bjfj7dzsKcNBszL1gClz5w1XTdUtJ0otOcIEhd8KA90yVgUdWnrNlhL5Dd48hiq+eeO1Quy2DlU98dYKXMK3ApSGOGQa0hUxzmaqiAw/Tcl0Op9vq/JkOR4BrJbjUw3LebCwDiCuZLkUx7oqn1bslSj9w6K0GlxqsvLYIcpWsC5KLAuEVwPbp8+t4H66Ws8hw6QPRNLRPQNukpsVaWQFsibPt5KhwMyEsRR5XgV9aSpsdQ8We2etptVISG0YKJGYhO4SIgJBL4X0ZsP5fGkfSlHkTXPaLpmevP80UR8RZy3qvonSuVuL8jAHlbQt5A1d92tjJergxCftflX7gedd9tP2/I/Rt9HpBemxe7hO6VotJqapqRURrpTloPC8VnyTOSClkI6gFHMeO5MRZA5yCil6ZUNHC4fE8QcJqRiDQxzMl3QSKVJHj5hyrOac380FRIPDEmtHFRQ8diJwkPacg3lKYBUjXXz6D9KIHJd5KvdbKLNBLfmBez1wb/4I+yDHWFuPJitj4CI3W56BpAO3MbAxla6k3e11euSjH7Wjlue3O0EQtQJCPWK481ulOyYwZPGR/jv6zzt1x1N34vvUj0u6br33dUHvqPF6rEH6OfIZ2prfGG2qReelWqyabutsTRelu9l0lzPDvt57i92Hi6HzbN0uoA/bd8f/fRtmWV5o1VyfgN+qNScH6zgK1sp2QpheaczedsOpJ8DTxHQEiFpMf1sIW5gqIUVCcCDZpoKwMD7cV9Aq9bTPpp72Zb+vlC/n+z4NVIvvLzRnVc3K97ZFZ6e2XW6O+mcY7Y8AwzcfJXXzXp/w94E9fcq/Opu6doz5iO5HY/5GfBfwcHr9kG+/bf6cER/f5yahKu+/wPm+Gx2s+JXPyHUhj6sA1XmldwSQWnp1Rb6sIDkAsp6+eaFGUUG/gt4QXd+sOL/VS5XuOu+D+Ou+ZyfcDEPZMhdhBlCy+eZft1lGeRFDmGKMTOL2BQbQi2/dNuaV00GGE2mPWLgoUUgKYU2l6ZWhKDnGaCZurUpcmiTLW3759Ywa//IfBCUcENQaAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Catalog Task">af51fd0e73141300612c273ffff6a785</action_type>
+        <action_type_parent display_value="Create Catalog Task">f597c41073081300612c273ffff6a767</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>af51fd0e73141300612c273ffff6a785</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <generation_source/>
+        <order>15</order>
+        <parent_ui_id>b4709833-ce49-4f13-917c-631e832a4d38</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>aba423e733d196109b1810919e5c7bfd</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:40:32</sys_updated_on>
+        <ui_id>44928ba4-5c3b-477a-90fa-49ef5efa4a04</ui_id>
+        <values>H4sIAAAAAAAA/+1Y227bOBD9FUFPu4DhlXxN8pZNkEWA3WQRd9OHuhUoaRQTpUSVpOK6hv99h6Tki3yJjTiFCyRP0XA4PHM5HHM+TV0SKcqz20wqkkUwmMjb2L1wSeiTnh91/TA5P+t1vV4Luh7ErSjuhFEIsdtwqdFLun4Se9Bv+x2/7Xk9vxW1+u0E/3qkf3aGehlJQWuOAkVCBoH5brjPhBVaLiOUy68oianMGZk8ri1EI8piAZl78elzw82JQAsKhHsxrS3tC4mREBiqftCAnDsLaAtONcm1eE329yYbXMQal9dw4buCLMZAXSSESWi4KclioriYzCUCSHyfMRQoUeD3iGYKDbpa97ukP/DYM0+rJYAeRmDX5p/m4GsbM7uUXBNFBmgsUoUo1aMRpxFIG58YElIwdbUsswr3ua4Cu8W4Wu7mrEizOxsZd25gPUXlwvW2FBYSghhyHRLtZBmBZDDi44fKoRuameiVi4xHhM2/iFKChoXSsKculYGMBM0rqEYJjwEGKR4QpCTPafYU5II/U2MUXUmbTww/mgnjYwQj6VPWtNXfxMyQ5g3Kr434kQiqLf+DZnAzns70HuMOiqWuB0yZO2u4ciKvGJFyESNMUPCt0NBtxEqnAxtevcUgv8STn6H0b9Z4LRH77V1VT7yVAhfwrQCpIA6ognSJjNOpLEIdn6agKp3N1ll5MB33AFbR8aGC5dxaWDsQl7RckGOVlQ9L8pKU/m5SWg4uOFlqbCBlu7VKSiwLhFcB28bPNed+OluPQcNkAEREoxsKTCc3K9LQEmSFnm9FQ46ZCWLB87x0+tRY2O7vLPbeSk3LERdKR8Ag0QndREQEgloSw5s9zWYL+ZPgRd7U1jbR9OD9h5F6Dz8rUg+0l871ipe7Y1BS20Ku8XpQCUtStw7stNtZ7bc877S77fHb6Nvw9IT42N9dp9FKLSb6UpNLJEQH0DvsOYoPC89rx9NhxbOhezF0B3f3HwcPj1jcJnASgYIYuo2htWB0ej3S8TtRyw/7va7ve2cIutNO2lFkkLaMuqkBo46BCzDJ1or+oPGeZmZfLFyTUEPujZgv/woGd5eF4inBXvSv4FiaEmQNNZyf+xjbHh5Hzrv14/zzOryX9Wdflkhukf2HfjojIp0QIHOIxUSxWtnEITEy2uHCEZDyZ/w3ETx11AgcrDFhJMbH9ZvvPWm/QtIO/A35Mo2rdnNTkXgDr6unHKQYWQWB5XntOVcuOo/lYtlo2kdrNHhd1RvN4p20rd9c4Y3L+JPzwaqdQO+xv5d/+dZDs7xQsrn66n+rdpTsrOOwtVK2Y0LVUjPy1q+66tV7GJn2AFGR6aOFsIapJFLIOQOS1RmEhfHHTQmtZE/naOzpnPZvNPMg2TYOKRfff8QdlTVLM8b5zR7Z67I+3jjCOGMPMKzeSqrLe3WqsQ3s4ZON7tHYtWG0geheGm3U/DuB5vT6wYad5/6csQY+gseBNOef4EyjH+6s+KXReVXIz6WD8rjU2wNIRb2qIh+XkOwAWU0cWCFHYRF9BVUj3UCvOH9WSyXveu/Dh9fN8BO8/zB+i1wEGYCJ5ptP9GkWsSKGIEUfqcDtcwyg5vN96/OSdRDBWFgTcxXJCxFBUIVS35UBNzFGb8ZuxUpcGieLU377/Ygc//w/6iZ1/8gbAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment>look up the manager of the cmdb_ci service now record and assign as approver</comment>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>6e136067-8d3a-4690-9725-0c652940b66b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>e7a423e733d196109b1810919e5c7bd8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:40:32</sys_updated_on>
+        <ui_id>94fa7b3e-68dc-4f11-8bc3-5874d11c57dc</ui_id>
+        <values>H4sIAAAAAAAA/+VYTW/bOBD9K4LOTlaybMvKbRHDQIC2AZJsL90uQZFUTJQmVZJK6gT57x2Kkm34I7FQB3CwR84MyTfD94aUvj2HmFiu5JU0FkvCbhfmioYXYZzjGMcki/M8G4+G0ajPhhGjfUIHOcnzOOyF3MXRLMqKLBuO0yhKkigajRKCYVIyInmU4wHESTxnEGlxLhgMH7Co3JjMaY4IR4bpB06ch3JTCrz4ujeAzLigmsnw4tv3XlhiDStbpsOL5w3XodAEzpmA0LsG2wZUuyiXQ1T7vO3T+rTgi3coTR2UqBeyX5ZJygBDgYVhvXCOJcVW6cXSohmm11KsDDMuLawYuuBfhj/BvuPIxRUMsiLM+5bDeueJr5d3FRNs8a3VFbGVbsLJTEHhjK8JZQWuhL1ct/mA69IxwE/xqfvZSlRz+cWXJFwu0B4PWCrDEGWlS9ahb1Ipbmfq8aZFOuWyrkvjFIpgsRxhazXPK+vwPIdMsDkshOa4LLm8R6VWD7yeDFjm5/cCBueFUI+wqeH38txT9xxqi8+nYJ/U5q9Yc5fFZ1gGJgMgLoAlyB+jUZWuy/mAiKhM7dBYGr9W+NILzcJcCmzMKnMoO/pZOdy+Dk3GyBfNTSGal/ZvWOKBNcm99P5YWsNX+Zut+EqUpNxtZdb05Xz/VjCV3noBBVI9/nd9s7KP0/EwTvIizpNoNBhGtEhiigcZIQ4IzbYleZQ1O6r47Sq0Kr5cL8Ou0jR63rJ92rVAo+f4aHoeRNFHUzRsfnqC7i5RX4L30mlMX2UoXZHRKG2RP4Q1oW7LrLNIDoDQiuTa0TrIF/tQNRopOBN01503dY6NO6///73zTlIhAIgif4JcCi7rRwwAPTnpDF/lbR23TtKamyvh1DZsyLaAcGBV8NRZRgfAaWV0C3sHdx7PDojtTVNzbfOWaY2NepKjqSfpH089z8tUl8XcUff20euo0MY/uXi8GQ/8XZsQv+xSZ6c946579l+21Z90kv864bxnsod3R34Z75Fz7z37xwymNvshL370yOk9s6vd2yiq7CMWP3b5G2Gi9qDq9E7plR2/+pWYr72yeYHmcOS8hK8IzQiwyiCsGSpUJSlqvh9WDHQUKLg2tgne7lI3DIQnAwWqDuyMBXV0sIzu+AR4O4/2DK6KoE2k2c0EkEhQJxIsE+mWdpeONzjim/o9Ot4Uc1GfCHwelmtHyrRWek/Xe+MwX2HFgS3xQFDxUUH9ec/cJYOdvfMNrB/iX8MJ9TXCcD7o41GaxHEUxRFNo3GaxuNRXoxwOihWAkfISAI9HCAVwDHAhVpOtQSJtpuXb+Rdu9QBqFruTpR0vxT6qQ0cLCBG0MJ6G3jTjXKlBMNyox3dwe3017TB3xB9eJIt6UP8tqv43Wa1vWlnvd/rxVLxfyT/WbFaJGMW9ccxJWfjNE7PBgUdnWUUD89wlg/ThDIyKI75CPn+G7kUgR5HFwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=b7106d451bb9865062e50ed2cd4bcb04^sys_idNOT IN27a423e733d196109b1810919e5c7bfe,63a423e733d196109b1810919e5c7be0,63a423e733d196109b1810919e5c7bfa,67a423e733d196109b1810919e5c7bf6"/>
+    <sys_hub_sub_flow_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <generation_source/>
+        <order>16</order>
+        <parent_ui_id>b4709833-ce49-4f13-917c-631e832a4d38</parent_ui_id>
+        <subflow display_value="Close Task After Wait">e96467a733d196109b1810919e5c7bc8</subflow>
+        <subflow_inputs>H4sIAAAAAAAA/8VU22rbQBD9laBny6zukt9KQyDQNNC6eQlBjHZH9tLVSpFWTlLjf++spMROnJY29ALGMLNzO2fm6HrrdH1xpuq7c90Z0BzPhbNwohDCuIQkCISXxR7LCi+lfy/DiCeFHzszR9o4zOIwTn4Ux4HiNFRIkQa6r2RtQPXW3G7DMPPTAkI34kHhhkkCbsZKcMMMywhLCIGF8/dgQNWrkyVl73aUL2TXKHi4msqQh6+lEi1qZ3F9M3MaaKmfwdZZbF88mYcGcwUFKkr8hCXSC8ffQPKYuxyhPAdmq5PVHtStW2Hn8GYO3hvUAqlPCarDmVOBFmDq9uHJ0yKIS632jrXUZkRYwX0nv1H1wJ8dNFg4Hc+n7nxdS46XjZG1HpMMFOpFTK36Sn8cp7ZUEsm9MgdU9h3mAhs7qu09DVJ+Xtd3T3ydST2gmh5VzUE9WWBMK4veYGfp7+XymJTR+eGVNaDCivrmFTSN1Ku8aeuNHHrR6NV8pciYl3SpNGMnV3oO3MKdE5Ewtxd8OrivoJUW+wWVoWTb8YuWt/142CLgBbdXx1JBV+elqZt5nucmURx6PE0wYImzG2jOb3sLbaRqIiUf6aWAjreyMe9ohA1O+HezvymmMt3fnOhbGFa9F5SXJcxlHv1OGFswf8HYsVz8kwuph/W8VTen+86/OvMrqccwJvkMS84P/JOG/D+moZA919BPxfNfVXPExXPpHND5T5TjA0AWR9wtOIb0lRbchYQnrhf4SZywQETgv1k5N98BPZdvl4gGAAA=</subflow_inputs>
+        <sys_class_name>sys_hub_sub_flow_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>27a423e733d196109b1810919e5c7bfe</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:10</sys_updated_on>
+        <ui_id>41e9ebd2-4f3c-47d7-82b4-ff69f26bd167</ui_id>
+        <wait_for_completion>false</wait_for_completion>
+    </sys_hub_sub_flow_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>37269ed7-a4f6-4cca-8058-da6abf4de0c4</parent_ui_id>
+        <subflow display_value="PROF - Ask One to Approve Task - R">1638e6b41b21e1508c5143f3cc4bcbb0</subflow>
+        <subflow_inputs>H4sIAAAAAAAA/+1Ty27bMBD8lUJnS9D74VuBIkCAtgHSJJcgEFbkyiFKUQpFOXEN/3uXkuy6iRv0gdx65HKWOzucud06/VCdyfbxXPUGFMNz7iwdPwsgDVgSVHWRp4mfhpj4yEPG44pVaeosHGFxCUQ5plUcVGGAQeLn1BJHdcSYxVUh4RQ0SMihR11qZK3mVFyDHGx1u61pdLkGLaCS6EHX6XaNercjEBd9J2FzM2Opwu6F5BqVs7y9WzgdaHrboHaW22dXZtNhKaFCSY2XWCPdMPwD1vvea6L97nJP++QudhYV9dEUurCsgoWDTwYVR5pag+xx4TSgOJhWb5yl0QMVNAK/UHJzQNwLZaZ1G3jqxTd6PAoXR+8vnX7Tl5bEKEkrGF50RrRq6jJWyWegVg6N+jyxt8piDYM0R8oSsOTYWa52+kyl/nLfPh7kOxNqXGu+lC0DeTiBMVpUg8He/sYgrl6qMhU/nvgVlNjQ3LKh/xdqVVoTiHEWUW+8laSDNzqFYy9WygNm9/VISfCseT+M5ZvZRp/omXHvQVwr8TBMns6ijCU8990sqSI3Bpa6eRFGLjkbcqgYWl/vRqHLh8GuNkk1i1JO+hKgZ1p05j1RWOO8/27xbzni4WuO5NkP7xnov57KEU23AnlamOZt0/MbXPe9V0T2RXp+3uDX6QnfKj2WwKvJ2QP+p4ZSk2NRsyhw05wHblwE6BZJ7LsFK7LIT2uGGf/r1Nx9ByZtryZ/BgAA</subflow_inputs>
+        <sys_class_name>sys_hub_sub_flow_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>63a423e733d196109b1810919e5c7be0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:10</sys_updated_on>
+        <ui_id>4cd1f581-cdf6-4e01-a733-f4ad529624ef</ui_id>
+        <wait_for_completion>true</wait_for_completion>
+    </sys_hub_sub_flow_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <generation_source/>
+        <order>13</order>
+        <parent_ui_id>c3c0b220-db83-478d-9230-2dafa7fbcce2</parent_ui_id>
+        <subflow display_value="add/remove user from group">af8856781b64061062e50ed2cd4bcbf5</subflow>
+        <subflow_inputs>H4sIAAAAAAAA/+1V227bMAz9lcLPceBLfMtb0aJAgW0FdulLURiyRCcCZNmV5bRZkH8f5VvTLNnaDtle9mKAIiUekufQdxurbrIrUT5ey1oTSeGaWXPL810SujRwszyJw8AJPQgcYB5ls4xmWWxNLN7G5XEchFHsZuHMCd29uDzCOEkKwMiFKpsKzRURjbE3G8ybY95p69lu0cd4XQmyvu1D8IQuuWAKpDW/u59YFVH4mAZlzTd7Lr2uIBUkA4EXP0MO6KHwBpjD3QHnHmzzPppq5+VSMYPEnVjwpEEywEw5ETVMrIJIRnSp1tZcqwYPFBB2I8V6jFhyqbsSC/JU8+/4uO9Ndt6fW/W6TpsaVDpgoMuSU7ipNC9ld1eTTBwOLUVTyE9dDaazkJNG6J3OYnjKoDK4DZIeVv5lWT6O7bvisi2xd4qSEjFaRGvFs0ZDbabR8K8/d6g7/HBgKiCgwLxpQaqKy0VaqXLF21wIvZguBBpTww7EWPOFnBJqqp5iV8nUsPWyPb4lipsWfMRn8LLJ+E3yh6YjsUsj6npZYCdJEtozFoAdOyF+ojyIAz8khIC1bZuePjSmtK5VfVPSrssYUFPFK32OEFbQ17+d/JlwImRkcpSRLHxmoJnrQd0Yx2ll8wqQw90e5UvMx0XjnVo0r5LLf6H0pE1cL2aJb+eQU3sWMNQIBImdkYDNoiTJWOT/K6H4v+RgnjyTjjCWlipVUJQrOKgYE9G5D+nmaNz71HTR0u8NZQwXMftZqc7GOo6U14uLDml6ZfmnUtaoKKTx3WZEe87YTq87a/gzmtk/L5e9sYwHw0rY3o/yuzh5or3l4O9sh99vhS55f3j5kkWd71RLY5z2y40xcu3vrIvcB5/S0I4cyPC/CswmDmW2Q5IQHaELNHr3urj/AQVdbMGSCgAA</subflow_inputs>
+        <sys_class_name>sys_hub_sub_flow_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>63a423e733d196109b1810919e5c7bfa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:10</sys_updated_on>
+        <ui_id>0862ba66-aa8a-4299-ac3d-57390db6e394</ui_id>
+        <wait_for_completion>true</wait_for_completion>
+    </sys_hub_sub_flow_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id/>
+        <subflow display_value="Task Approved or Rejected or Not Required">82d3eb7f1b60555062e50ed2cd4bcbe0</subflow>
+        <subflow_inputs>H4sIAAAAAAAA/91W227jNhD9FUHPpivKoi55C3YRIECbLbLpvgSBMCIph61ukajsuob/vSPrYtlx3NjNxkDfpOEMeeZwznDul2ZVR1dJ/v06qzRkXF4L88JkMwou5YxGceC7zHJtySwpbC6ciEfAzImpGj+0zezYi2nkWozt+lke+mWQSvTUUP0VlpLnpUDjMyR1Y10u8fQYT5+WSqerFS4JVRUJLL51HmjhjyoRpczMi/uHiVlAiTtqWZoXy50lvShkmEAkEwy8lbHEFS6PwNrH3iFY47YHuzeD5iw0lqNTcKFBRSem/KFlJiSeGkNSyYmZQiZA5+XCvNBljYZSgviSJYvB41Fluk03hR+V+hs3n9mT0f4tgDUdueLyS6FVnrURGqJk7JAndZrdtKgbRmUMdaJHjNaVDIUsGozNqR2E+Otj/n2g7Upl63S6xSTnkAx/oHWpolrLqrmFWt29ZKM1/rrnNmQiUzw3TKEoVDYPizJ/VuuzEHo6nSf4M22KAjFWap5NgTe5TpFBmDal+nlt/galahL/DbfB4ObEPzL1VLcVHM2CmXAcjwTgucQJXE6CIPaJHbvUY7YFDKS5WhMcPtVNai1VHSlhyy06VLxUhb5ECM+yy381+W+qEQcrcTZSDaaG5EgR5iWW3p+Sa7ktnzVNzx0T09YdkhBBablPTm+IOE1un9ZVeUSGfeBll6KRlyi5IcXDBHTq4/2hnfTsnyW9QXZY7/fLATshxk2eSYOQ0aWMOkFTKLt5jjxhY+oTGEfcvrzwEQVdxGwccZNr5PCpVuVWVJZrJG8wd5HO6mHoDZ/+l8ntdEo6apVnbZND2W73yEFCH9IgUY0Ox25IAhoDcWwvIj5QSjiwKHYCJh3hnatBBnCofTijBontSStsX0MfGz7al7rart33Gy76zd+Kt4/8vQVsXHY4DbL53Ox6RHbDINIbeu0c7oWd5S3NkFq2s90Oq0W1A2ldX69PJq8FnHFS6enanVN6+4eI0HL9yHcdnwR+LInjUI+AZbtECCoCyanF+NmmFGYfKmrmvyjTZBEOz7XSMnX2DvogBFZvil6rlXHJ8dWpjM3qvMzrYtrsu396OWmX0zT+FQsnmx/Bxo7Ek4UxzDbEuEZCjHWlv4W2TtRVD6F/1d5N075lWa+MOPv0e1atDixsS3W4n49RqgxmkWA24UFMieMGnES+ZMSDyLNEwALHPdtzyQ4+P669KTlVhbtvykik9KXimpH5ZAXdYfAvV02GRyDtg68rY/et/Lc8OtVEeZ5IyDayYe8mG+d9RRN33HTmz9vc96s/S1cbnraFtXVtHyIuCAQF2wPiu5ZPHGpTAsIOiMWswBbgMRmfLq6HfwCmap0u5BIAAA==</subflow_inputs>
+        <sys_class_name>sys_hub_sub_flow_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>67a423e733d196109b1810919e5c7bf6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:10</sys_updated_on>
+        <ui_id>85e41eb4-278b-4869-a33e-39d45bd3f5f6</ui_id>
+        <wait_for_completion>true</wait_for_completion>
+    </sys_hub_sub_flow_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=b7106d451bb9865062e50ed2cd4bcb04^sys_idNOT IN53a423e733d196109b1810919e5c7bc9,63a423e733d196109b1810919e5c7bd8,67a463e733d196109b1810919e5c7b01,6fa423e733d196109b1810919e5c7bf2,6fa423e733d196109b1810919e5c7bf5,a3a423e733d196109b1810919e5c7bfd,a7a423e733d196109b1810919e5c7bdc,a7a423e733d196109b1810919e5c7bf0,a7a423e733d196109b1810919e5c7bf9,d7a423e733d196109b1810919e5c7bc5,e7a423e733d196109b1810919e5c7bdf"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">88a42fa733d196109b1810919e5c7b9c</block>
+        <comment>set manager as approver</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <flow_variables_assigned>approver</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id>cd341a0e-cd31-411d-8ee7-d3441679589a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>53a423e733d196109b1810919e5c7bc9</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:20</sys_updated_on>
+        <ui_id>c0ee829a-e1d4-47bd-90b2-7666224a8fd6</ui_id>
+        <values>H4sIAAAAAAAA/+1VS2/aQBD+L3sGyzwMhRtSFQkpbaSG5lJF1nh3bFZd7zr7gFDEf++sbSBKohx66iE3/O3sfI+dEUdmgm+Cdxuzck5Wmi1/PQ6Y1BGj30emoUa2ZNA01uzQsgHbgQoROh5dKEpl9kllTWiSGjRUaE8nqhHSNQoOD30pIXwrlbDYEzRgqa+nfsvjqyN/aDBXUKCiiz+wRDrhSB2kICAtYQQjvhgVxeLLLEtnY8xSFGMupgUvFnOqO99dXSW/NRFZCLEv+hsrop50wPDZoxZIfCUohwNG1gR4Yw8XxCKIO62uwFZq3zmt4dnJP9R9Mh68IFgyd3B5cC093xrJ8a7x0ujulodCvS4yKtT6e6c9hoolBOVfhEqFucAmio3svZTyfmv2l+RupG599YfKcFCXL/DeyiJ4dPEhgty8jaUDb995EFRYE29eU65SV3kMV7ZcJL1OKkUfSRwQ0hhnKwEe/SYUJSQ3hH9t4QewMpr/Rm1a30H+1PIp4Do+eFakUIxTPgRYZMNpNhHDYjGaDCfZPANRzCYwFezUBp0/hWiti6oPJe/ypQLHrWz8iiTssPd/eozT3LF30x7V3ppK8rV2Hsjm/cG1Mvj8o7mD6Xk+4aOh+7fN+dyVz135P3ZFIJeOVG2ihPX5PyIeHGhq4tJcob2xv6OfK3b6C1bceRxtBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">40a42fa733d196109b1810919e5c7ba1</block>
+        <comment/>
+        <connected_to>cd341a0e-cd31-411d-8ee7-d3441679589a</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>63a423e733d196109b1810919e5c7bd8</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:20</sys_updated_on>
+        <ui_id>6e136067-8d3a-4690-9725-0c652940b66b</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9ca46fa733d196109b1810919e5c7b45</block>
+        <comment/>
+        <connected_to>b4709833-ce49-4f13-917c-631e832a4d38</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>17</order>
+        <outputs_assigned/>
+        <parent_ui_id>c3c0b220-db83-478d-9230-2dafa7fbcce2</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>67a463e733d196109b1810919e5c7b01</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:20</sys_updated_on>
+        <ui_id>9c2fd6e9-9f09-46fb-8c35-3b5490f58d4a</ui_id>
+        <values>H4sIAAAAAAAA/+VUTY/TMBD9KyjnNMpHG9reVqCVkICV2NVeYBVN7Elr4djBdtotUf8743y0FbsrEEhcuMVvPPPeGz+lC3TrmtbZO31lrdioYP35IQyE8hh9d4GCGoN1wLTiwgmtih4Igx3I1hfokwvbSDjcnxG2FZIbHKc1YKjHoQnW3U8ld2iwkFCipMZbZ4TaULvgdKpiqJIVS1iW5lkax+lynpR5ViYpzwAhpXtT45tJ3Kv3PRK+qNrzEW4nJm24l5XEYYCPDhVHoq5AWgyDGhQHp83hhBgEfqPkGdgK5QbHNTxa8Z1mp4uFv1gheWSndWjB8KbxSgbEQSmnopZtrT4Ogv02sYJWuottthYLjo1X5+lG7up2q/efJqJroXonY1FqBvJ0Akd+y9ah9S+AEmsaVNTQNLSFojF6J/pm0lJHG0mHqJJ6T6Q+EhEwLzyiZUB0TfjbHr4HI7yLDzSGmgeZJVjBij4+NM4ZsnDs11F8a72gweBopRi2QRcsM6JxV8Szw1H1MXyavYvYdV28zNMS8nwGsITZPF2tZsAyPlu8zlYxL3PMVvNoSHdhW8bQ2uPxSxvHGX+a2b8d9w8CnzwX+Gei/nLK01+k3D/Xb4Y8juP/NOXCFkNaR289+R+H/MEnemCwQ0A4MmFJyJ3H3k3/YV840EsLdgnttfnqLZyx4w/qK6pM0QUAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">04a42fa733d196109b1810919e5c7bea</block>
+        <comment/>
+        <connected_to>37269ed7-a4f6-4cca-8058-da6abf4de0c4</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>6fa423e733d196109b1810919e5c7bf2</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:20</sys_updated_on>
+        <ui_id>3278565d-c915-422b-b306-d1bb580f5059</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">44a42fa733d196109b1810919e5c7bef</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <flow_variables_assigned>approval_state</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <parent_ui_id>3278565d-c915-422b-b306-d1bb580f5059</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>6fa423e733d196109b1810919e5c7bf5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:20</sys_updated_on>
+        <ui_id>ccf5d1e7-4e8b-4c37-8231-026b17f6d8cb</ui_id>
+        <values>H4sIAAAAAAAA/+1VTW/bMAz9K4POSeA6zuetwFAgQLcCS9bLUBi0RCfCZMmV5KZZkP8+MrYbIEVvA3bpzXqk+B6fSPgoXBPrJoaNuw1Bb61Y/noaCG0Zo++jsFChWAqoa+9ewOQhQkQxEPTdXAKoCFI61AYOj+8jcqeN8thVr8FT0YheLI9XoXioMTdQoKEC6+i13dJ1rehUoJKzdDK7KcY3WbpIpilOElSpVFkhiyyjvP5iL/ZLL/ajJpiO8NATOa9YVTIQ+BrRKhK/LMEEHIgKrILo/OEN8QjqwZoLsNM2UjXBya9B/6HS8yRJOLNEalFiG5U7pyU+1FE72yIRCtMHnWkq+70VzKZiCY2JvamENAFzhTXLY76OvFzv3P5HT3Sn7bmTLmicBPN2gkj9Fk3EwA/Q6M2VCy1yf/0KaLAixrwiGwnJ2Ut9ZiHR1Whr6DAqjduTOh6lEUjucES2weiO8K9n+BG85na/URm6zHQ/rX5ucMWvLOl9oZgshul8poYZTNIhTBcwhKScjsfjyTTJ5uJ0tjR/brip1qTOjrx1lBKC9LqOtyThBbvOT088ti17O9ys9t5ttVxZGgnybX0IZxnJWMni42Gb9kP5bqL+ybp8LsjngvyvBVEodSBVG5aw6v8DHDjQkPCmXKC987+5nwt2+gvXP97dUQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d0a46fa733d196109b1810919e5c7b14</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>14</order>
+        <outputs_assigned/>
+        <parent_ui_id>c3c0b220-db83-478d-9230-2dafa7fbcce2</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>a3a423e733d196109b1810919e5c7bfd</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:20</sys_updated_on>
+        <ui_id>b4709833-ce49-4f13-917c-631e832a4d38</ui_id>
+        <values>H4sIAAAAAAAA/+VUXWvbMBT9K8PPjpHt2IvzVlYKg22FtfRlK+ZakhNRWfIkOWkW8t935Y8krCkbo297s87Vveecq4P3ge5c2zl7r6+sFSsVLL89hoFQHsPvfaCg4cEyoFox4YRWZQ+EwQZk5wv4yYRtJeweTghdC8kMH6e1YLDHcRMs97+V3K7lpYSKS2y8c0aoFbYLhqeaQB0XNKZpkqcJIcliHld5WsUJS4FDivemxg+TuHefeiR8VbXnQ9xOTNowLysmYcCfHVeMI3UN0vIwaEAxcNrsjojhwG6VPAFrodzguIFnK37i7CTL/MWao0d6XIcWlN+2XsmAOKjkVNSya9SXQbDfJq+hk+5sm53lJeOtV+fpRu76bq23XyeiG6F6J2NRagryeAKHfqvOcetfgEve4KCygbbFLZSt0RvRN6OWJlpJPES11Fsk9ZGIgHrhES4DohvEr3v4AYzwLj7jGGweZFZgBS37+OA4Z9DCoV9H+aPzggaDo5Vy2AZesNSI1l0hz4aPqg/hy+ydxW6/J4s8qSDPZwALmM2TopgBTdkse58WhFU5T4t5NKS7tB2l3NrD4XtHSMp6XS9y+xYj3yL4BWR1FpPscvDn+aXgX4j862lP/pB27+Uvw04I+U/TLmw5pHb01pP/c9gffbIHBjsEhHEqLAq599jH6X/sCzt8aUHPoa02T97CCTv8AjA2m9nZBQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">4ca42fa733d196109b1810919e5c7ba7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <flow_variables_assigned>approver</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>6e136067-8d3a-4690-9725-0c652940b66b</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>a7a423e733d196109b1810919e5c7bdc</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:20</sys_updated_on>
+        <ui_id>4ef8b85f-ad58-4eef-86bb-497d914f46d4</ui_id>
+        <values>H4sIAAAAAAAA/+1VS2vjMBD+Lz7HJo7tJM4tsBQC3S202V6WYkbSOBErS64lJ/WG/Pcd2XmUtvS2sIferE/SfA/N4ENgWle3zq7N0lq50cHi19MokNpj9H0INFQYLAKo68bssAlGwQ5U66HDIU9LmLEEw+lc8DAt4zicM56E2XyWijjm2Uzw6B65aURk9hpFwbrjkUoIaWsF3eOpEiF8K5Vo8MRfQ0O0jugWhzdbrquxUMBQ0cV7LJF2OFIFKQgYlxBDzPOYsXw+zcbTCWZjFBMuUsZZPqNz57vLq6P3Hj0LIc2r+mTC6xmPAnxxqAUSXwnK4iioQAtwpukuSIMg7rS6Alup3eC0ghcr/1D1ZDJ6RbAIbGeL1vb0fGskx7vaSaOHWw6YenvIqLbSPwbtPlQsoVXuVah0sBBYe7Ge/SSlfNia/SW5G6l7X6dNZTioywqcayRrHVr/EK1cv49lAG8/eBBUWBFvUVGuUm8KH67suUh6FW0ULaJSmT1p9K0XAfd+I4oSohvCv/XwIzTSm/9OZXrfrfyp5XOLK//gGRsDm4x5CJBnYZolImR5nIRJNstAsGkCqQiOfdDFc+utDVGdQimGfOmA5Y2s3ZIk7PDk//jkm31gH4bBq701G8lX2jogmw+d7WXks8/6jmXn/oTPmu6fDNbXKH2N0v8xSgK5tKRq7SWszn8Yv9FR1/iZukJ70/z2fq7Y8S+B9UJwqwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">84a42fa733d196109b1810919e5c7be5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <flow_variables_assigned>approval_state</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>37269ed7-a4f6-4cca-8058-da6abf4de0c4</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>a7a423e733d196109b1810919e5c7bf0</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:20</sys_updated_on>
+        <ui_id>49e96813-037f-46f8-a265-8480e8790f2c</ui_id>
+        <values>H4sIAAAAAAAA/+1VTW/bMAz9K4POseH4Kx+3AkOBAN0KLFkvQ2HQEp0IkyXXkptmQf77qNhu0Aw97TAM6M16lPgeH0n4yEznms7ZjbmxVm41W/54nDCpPUbfR6ahRrZk0DSteQZVWAcO2YTRd+cDx2PKxbTK5tOAiyoPUoymAcySJKhSEFm8yOMUq/Dt+9OJMghpGwWHh79OxHdSiRYH7Q20JNlhy5bHq5A7NFgoKFER39q1Um/puRR0KlHwWZzNpmUyTeNFlMeYRShiLtKSl2lK98aHo4JPoxXvWeTpCLcjkWmFVxVNGL441AKJuAJlccJq0AKcaQ+vSIsg7rW6ADupHWVj/vKLlb8o9TyKIn+zQiqRYx/lOyM53jdOGt0jDko1Bo3qav21F+x7gBV0yo09IKSzWAhsvDzPN5BX653ZfxuJbqU+VzIEleGgXk/gqN6yc2h9Azq5uXKhR+6uu4AKa2IsarKRkMJ7Kc8sJLoOt4oOYaXMntT5QQ2B+wpDsg3CW8I/n+EHaKUv9wulocee7ruWTx2ufJc59RfKbBHE85kIUsjiAPIFBBBVeZIkWR6lc3Y6W1o8db6o3qTBjqJ3lC5Y3srG3ZCEZxwqPz36pejZ+9Xxau/MVvKVppEg39YHe5aRloKX7w5bguNQ/jFR/8Eyfqzfx/r9q/UTyKUlVRsvYTX+w3zgQEPi9/AC7U3709dzwU6/AVg1d3YNBwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">dca46fa733d196109b1810919e5c7b01</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>12</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>a7a423e733d196109b1810919e5c7bf9</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:20</sys_updated_on>
+        <ui_id>c3c0b220-db83-478d-9230-2dafa7fbcce2</ui_id>
+        <values>H4sIAAAAAAAA/+VUXWvcMBD8K8XPxvgjPpp7Cy2BQttAE/LSBrOW1neisuRK8l2uh/97V5Z9dzQXmpS+9c2a1e7MrAbvI927rnf2Tl9ZK1YqWn59iCOhPEbf+0hBi9EyYlpx4YRW1QjE0QZk7wv0yYXtJOzujwhbC8kNTtM6MNTj0ETL/W8lt+uwklCjpMZbZ4RaUbvgdGpSaLJLlrEiXxR5muZvL7J6UdRZzgtAKOje3PhuFvfm44jEz6r2fITbmUkb7mVlaRzho0PFkagbkBbjqAXFwWmzOyAGgd8oeQTWQrnguIVHK37S7Lws/cUGySM7rEMLhjedVxIQB7Wci1r2rfocBPttYgO9dCfb7C1WHDuvztNN3M3tWm+/zETXQo1OpqLUDOThBI781r1D618AJbY0qGqh62gLVWf0RozNpKVNVpIOSSP1lkh9JBJgXnhCy4DkmvD3I3wPRngXn2gMNQeZNVjBqjE+NM4ZsjCM66h+9F5QMDhZqcI26IJlRnTuing2OKke4qfZO4ndfj8q3EwiEhJBNkBW1oHDYfjWp2nBA0pv+iSkr+7/F5G+hLIps7Q8H+mLxblInwnz8znO/5Bj/yAvjHGapv9pjoWtQh4nbyP5X8f4wWc2MNgQEI5MWBJy57EP85/WF3b00oKdQlttvnsLR2z4BUsyoCOzBQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">80a42fa733d196109b1810919e5c7b96</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:09</sys_created_on>
+        <sys_id>d7a423e733d196109b1810919e5c7bc5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:20</sys_updated_on>
+        <ui_id>cd341a0e-cd31-411d-8ee7-d3441679589a</ui_id>
+        <values>H4sIAAAAAAAA/+VUyW7bMBT8FZdnQdASG41vQYsABdoGaIJc2kB4Ip9sohSpcvFSw//eRy1JkDhtUPTWmzlvmZmngQ/MBN8F727MhXNypdny613CpI4Y/T4wDS2yJeNGC+ml0VUPJGwDKsSCbGYtaFihneFOOppKmJCuU7C//U0LX0slLI58HVja6tGy5eFJye87rBTUqGjTtbdSr2hcCno1GTT5Oc95WSzKIsuKt2d5vSjrvBAlIJTUNw2+m+TPPvZI8qKvyEe4m5iMFVFWniUMdx61QKJuQDlMGLkS4I3d3yMWQVxp9QCspfa0jsXmnZM/aXcxn8fGBskjx6HI10ZyvOqikgHxUKupaFRo9edBcDwvNhCUn85LSHBYCeyiukg3cjfXa7P9MhFdSt07GYvKcFD3L/Dktw4eXfwCqLClRVULXUdXqDprNrIfJi1tulL0SBtltkQaQ5MCj8JTOgakl4S/7+FbsDK6+ERraHiQWYOTvOoDRuu8JQvH/hzVjxAFDQZHK9VwDWpw3MrOXxDPBkfVx+R5Oh8F83BwoY4i05U1oUvHCB6Pb76FLCvF85y+YuJfxPYc5s08z+anY3u2OBXbE4F9OavFH7Iaj/7KqGZZ9p9mVbpqyNzorSf/66jexVwODG4IiEAuHQm5idiH6f82Fvb0pSV/DG2N/R4tPGDHX9qTV+25BQAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">4ca42fa733d196109b1810919e5c7bac</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:10</sys_created_on>
+        <sys_id>e7a423e733d196109b1810919e5c7bdf</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:20</sys_updated_on>
+        <ui_id>37269ed7-a4f6-4cca-8058-da6abf4de0c4</ui_id>
+        <values>H4sIAAAAAAAA/+VUTYvbMBD9K8VnY/yxDt3cQstCoe1Cd9lLu4ixNE5EZcmV5GRTk//ekT+S0M2ypfTWm/VGM++90cN9ZDrfdt7dm5Vzcq2j5dfHOJI6YPTdRxoajJYRN1pIL41mAxBHW1BdKNCnkK5VsH84IXwjlbA4TWvBUo9HGy3730p+3yJTUKGixjtvpV5TuxR0qlOos2ue8SJfFHma5m+vsmpRVFkuCkAo6N7c+G4W9+bjgMQvqg58hLuZyVgRZGVpHOGTRy2QqGtQDuOoAS3AG7s/IhZB3Gp1AjZS+9FxA09O/qTZeVmGizWSR35ch5Ecb9ugZEQ8VGouGtU1+vMoOGwTa+iUP9tm55AJbIO6QDdx13cbs/syE91IPTiZispwUMcTePJbdR5deAFU2NAg1kDb0hZYa81WDs2kpUnWig5JrcyOSEMkEuBBeELLgOSG8PcD/ABWBhefaAw1jzIrcJKzIT40zluycBjWwX50QdBocLLCxm3QBcetbP2KeLY4qT7Ez7N3Fru+d10VRCYgBLPYmC0eDt+6NC3ESojnqXy94V+E9hrKuszS8nJorxaXQnshri8nNX8lqWHlfxjUNE3/06RKx8bETd4G8r8O6mNI5cjgxoAI5NKRkPuAfZj/paGwp5eW/BzaGfs9WDhhh19pPpCUlQUAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=b7106d451bb9865062e50ed2cd4bcb04"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=b7106d451bb9865062e50ed2cd4bcb04^sys_idNOT IN0fa1a1c91bb9865062e50ed2cd4bcb97,bedc72571b31429062e50ed2cd4bcb44"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=5b0ab20c-aa95-453d-b913-3575adb63a4d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>approver</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Approver</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</model>
+        <model_id>b7106d451bb9865062e50ed2cd4bcb04</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_b7106d451bb9865062e50ed2cd4bcb04</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 13:58:13</sys_created_on>
+        <sys_id>0fa1a1c91bb9865062e50ed2cd4bcb97</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:34:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c71bab59-287d-4a52-a69a-a0f633356048</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>approval_state</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>approval state</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</model>
+        <model_id>b7106d451bb9865062e50ed2cd4bcb04</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_b7106d451bb9865062e50ed2cd4bcb04</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-05-01 20:22:55</sys_created_on>
+        <sys_id>bedc72571b31429062e50ed2cd4bcb44</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:34:55</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04^sys_idNOT IN03a1a1c91bb9865062e50ed2cd4bcb8a,0f1a61c51bf9865062e50ed2cd4bcb22,43a1a1c91bb9865062e50ed2cd4bcb8e,ba1a61c51bf9865062e50ed2cd4bcb1f,cba1a1c91bb9865062e50ed2cd4bcb92"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>group</element>
+        <help/>
+        <hint/>
+        <label>group</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 13:58:13</sys_created_on>
+        <sys_id>03a1a1c91bb9865062e50ed2cd4bcb8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-04-24 13:58:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>start_string</element>
+        <help/>
+        <hint/>
+        <label>start string</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:04</sys_created_on>
+        <sys_id>0f1a61c51bf9865062e50ed2cd4bcb22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-04-24 14:35:04</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>user</element>
+        <help/>
+        <hint/>
+        <label>user</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 13:58:13</sys_created_on>
+        <sys_id>43a1a1c91bb9865062e50ed2cd4bcb8e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-04-24 13:58:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>ritm</element>
+        <help/>
+        <hint/>
+        <label>RITM</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:04</sys_created_on>
+        <sys_id>ba1a61c51bf9865062e50ed2cd4bcb1f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-04-24 14:35:04</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>add_remove</element>
+        <help/>
+        <hint/>
+        <label>Add/Remove</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 13:58:13</sys_created_on>
+        <sys_id>cba1a1c91bb9865062e50ed2cd4bcb92</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-04-24 13:58:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04^sys_idNOT IN4ba1a1c91bb9865062e50ed2cd4bcb90,43a1a1c91bb9865062e50ed2cd4bcb91,0ba1a1c91bb9865062e50ed2cd4bcb91"/>
+    <sys_choice field="add_remove" table="var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>add_remove</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>-- None --</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>John.Schwab</sys_created_by>
+            <sys_created_on>2024-04-24 13:58:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4ba1a1c91bb9865062e50ed2cd4bcb90</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>John.Schwab</sys_updated_by>
+            <sys_updated_on>2024-04-24 14:35:04</sys_updated_on>
+            <value/>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>add_remove</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Add</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>John.Schwab</sys_created_by>
+            <sys_created_on>2024-04-24 13:58:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>43a1a1c91bb9865062e50ed2cd4bcb91</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>John.Schwab</sys_updated_by>
+            <sys_updated_on>2024-04-24 13:58:13</sys_updated_on>
+            <value>Add</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>add_remove</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Remove</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_input_b7106d451bb9865062e50ed2cd4bcb04</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>John.Schwab</sys_created_by>
+            <sys_created_on>2024-04-24 13:58:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0ba1a1c91bb9865062e50ed2cd4bcb91</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>John.Schwab</sys_updated_by>
+            <sys_updated_on>2024-04-24 13:58:13</sys_updated_on>
+            <value>Remove</value>
+        </sys_choice>
+    </sys_choice>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_b7106d451bb9865062e50ed2cd4bcb04"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_b7106d451bb9865062e50ed2cd4bcb04"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=edge,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>do all the actions required PER group</description>
+        <flow_priority/>
+        <internal_name>api_connect_adddisable_master_subflow</internal_name>
+        <label_cache>[{"name":"94fa7b3e-68dc-4f11-8bc3-5874d11c57dc.Record.owned_by","label":"4 - Look Up Record➛Service Record➛Owned by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci_service","column_name":"owned_by"},{"name":"94fa7b3e-68dc-4f11-8bc3-5874d11c57dc.Record.managed_by","label":"4 - Look Up Record➛Service Record➛Managed by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"cmdb_ci_service","column_name":"managed_by"},{"name":"subflow.group.manager","label":"Input➛group➛Manager","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sys_user_group","column_name":"manager"},{"name":"subflow.user","label":"Input➛user","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"67056301-fbfd-47b4-ab1c-83db9c9bec1c","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"flow_variable.approver","label":"Flow Variables➛Approver","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"5b0ab20c-aa95-453d-b913-3575adb63a4d"}},{"name":"subflow.ritm","label":"Input➛RITM","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"a65ada90-2db3-46c6-a626-75b6ba9b83df","uiTypeLabel":"Reference"}},{"name":"4cd1f581-cdf6-4e01-a733-f4ad529624ef.approval_state","label":"7 - PROF - Ask One to Approve Task - R➛Approval State","reference_display":"Approval State","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"a3903c82-5e05-4799-ba1a-97df8b14de88"}},{"name":"subflow.group.name","label":"Input➛group➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"sys_user_group","column_name":"name"},{"name":"subflow.add_remove","label":"Input➛Add/Remove","reference":"","reference_display":"","type":"choice","base_type":"choice","column_name":"","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Add","value":"Add","order":1.0},{"label":"Remove","value":"Remove","order":2.0}],"attributes":{"uiType":"choice","uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"cf8055e4-f49c-4d35-a713-943ee8da8e0f","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"subflow.group","label":"Input➛group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"702fc47a-9017-4052-b6dc-8fb1f8b6395f","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"0862ba66-aa8a-4299-ac3d-57390db6e394.output_success","label":"13 - add/remove user from group➛output Success","reference_display":"output Success","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"be81444c-92b2-47d3-82d2-707ce5eba3bf"}},{"name":"subflow.start_string","label":"Input➛start string","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"24bca73c-00ac-4848-9375-a2f52a3d7d48","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"flow_variable.approval_state","label":"Flow Variables➛approval state","type":"string","base_type":"string","attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"c71bab59-287d-4a52-a69a-a0f633356048"}},{"name":"44928ba4-5c3b-477a-90fa-49ef5efa4a04.Catalog Task","label":"15 - Create Catalog Task➛Catalog Task","reference":"sc_task","reference_display":"Catalog Task","type":"document_id","base_type":"document_id","usedInstances":{"41e9ebd2-4f3c-47d7-82b4-ff69f26bd167":["task"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>Api Connect add/Disable Master Subflow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>852aa1c51bf9865062e50ed2cd4bcbf3</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:24</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=852aa1c51bf9865062e50ed2cd4bcbf3"/>
+    <sys_variable_value action="delete_multiple" query="document_key=852aa1c51bf9865062e50ed2cd4bcbf3"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=852aa1c51bf9865062e50ed2cd4bcbf3"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=852aa1c51bf9865062e50ed2cd4bcbf3^sys_idNOT IN092aa1c51bf9865062e50ed2cd4bcbf4"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>852aa1c51bf9865062e50ed2cd4bcbf3</id>
+        <name>Api Connect add/Disable Master Subflow</name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:12</sys_created_on>
+        <sys_id>092aa1c51bf9865062e50ed2cd4bcbf4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-04-24 14:35:12</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=092aa1c51bf9865062e50ed2cd4bcbf4"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=852aa1c51bf9865062e50ed2cd4bcbf3^sys_idNOT IN092ae1c51bf9865062e50ed2cd4bcb12,0d2aa1c51bf9865062e50ed2cd4bcbf5,0d2ae1c51bf9865062e50ed2cd4bcb42,5d2ae1c51bf9865062e50ed2cd4bcb4d,c92ae1c51bf9865062e50ed2cd4bcb0a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=702fc47a-9017-4052-b6dc-8fb1f8b6395f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user_group</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>group</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>group</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</model>
+        <model_id>852aa1c51bf9865062e50ed2cd4bcbf3</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user_group">sys_user_group</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:13</sys_created_on>
+        <sys_id>092ae1c51bf9865062e50ed2cd4bcb12</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=092ae1c51bf9865062e50ed2cd4bcb12"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=a65ada90-2db3-46c6-a626-75b6ba9b83df</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sc_req_item</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>ritm</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>RITM</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</model>
+        <model_id>852aa1c51bf9865062e50ed2cd4bcbf3</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:12</sys_created_on>
+        <sys_id>0d2aa1c51bf9865062e50ed2cd4bcbf5</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0d2aa1c51bf9865062e50ed2cd4bcbf5"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=67056301-fbfd-47b4-ab1c-83db9c9bec1c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>user</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>user</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</model>
+        <model_id>852aa1c51bf9865062e50ed2cd4bcbf3</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:13</sys_created_on>
+        <sys_id>0d2ae1c51bf9865062e50ed2cd4bcb42</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0d2ae1c51bf9865062e50ed2cd4bcb42"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice,uiUniqueId=cf8055e4-f49c-4d35-a713-943ee8da8e0f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>1</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>add_remove</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>Add/Remove</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</model>
+        <model_id>852aa1c51bf9865062e50ed2cd4bcbf3</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:13</sys_created_on>
+        <sys_id>5d2ae1c51bf9865062e50ed2cd4bcb4d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=5d2ae1c51bf9865062e50ed2cd4bcb4d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=24bca73c-00ac-4848-9375-a2f52a3d7d48</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>start_string</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>start string</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</model>
+        <model_id>852aa1c51bf9865062e50ed2cd4bcbf3</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:13</sys_created_on>
+        <sys_id>c92ae1c51bf9865062e50ed2cd4bcb0a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c92ae1c51bf9865062e50ed2cd4bcb0a"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=852aa1c51bf9865062e50ed2cd4bcbf3"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=852aa1c51bf9865062e50ed2cd4bcbf3"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=852aa1c51bf9865062e50ed2cd4bcbf3"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=852aa1c51bf9865062e50ed2cd4bcbf3^sys_idNOT INd1b4e3e733d196109b1810919e5c7b42,d5b4e3e733d196109b1810919e5c7b7a,d9b4e3e733d196109b1810919e5c7b75"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment>look up the manager of the cmdb_ci service now record and assign as approver</comment>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>6e136067-8d3a-4690-9725-0c652940b66b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>d1b4e3e733d196109b1810919e5c7b42</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:17</sys_updated_on>
+        <ui_id>94fa7b3e-68dc-4f11-8bc3-5874d11c57dc</ui_id>
+        <values>H4sIAAAAAAAA/+VYTW/bOBD9K4LOTlaybMvKbRHDQIC2AZJsL90uQZFUTJQmVZJK6gT57x2Kkm34I7FQB3CwR84MyTfD94aUvj2HmFiu5JU0FkvCbhfmioYXYZzjGMcki/M8G4+G0ajPhhGjfUIHOcnzOOyF3MXRLMqKLBuO0yhKkigajRKCYVIyInmU4wHESTxnEGlxLhgMH7Co3JjMaY4IR4bpB06ch3JTCrz4ujeAzLigmsnw4tv3XlhiDStbpsOL5w3XodAEzpmA0LsG2wZUuyiXQ1T7vO3T+rTgi3coTR2UqBeyX5ZJygBDgYVhvXCOJcVW6cXSohmm11KsDDMuLawYuuBfhj/BvuPIxRUMsiLM+5bDeueJr5d3FRNs8a3VFbGVbsLJTEHhjK8JZQWuhL1ct/mA69IxwE/xqfvZSlRz+cWXJFwu0B4PWCrDEGWlS9ahb1Ipbmfq8aZFOuWyrkvjFIpgsRxhazXPK+vwPIdMsDkshOa4LLm8R6VWD7yeDFjm5/cCBueFUI+wqeH38txT9xxqi8+nYJ/U5q9Yc5fFZ1gGJgMgLoAlyB+jUZWuy/mAiKhM7dBYGr9W+NILzcJcCmzMKnMoO/pZOdy+Dk3GyBfNTSGal/ZvWOKBNcm99P5YWsNX+Zut+EqUpNxtZdb05Xz/VjCV3noBBVI9/nd9s7KP0/EwTvIizpNoNBhGtEhiigcZIQ4IzbYleZQ1O6r47Sq0Kr5cL8Ou0jR63rJ92rVAo+f4aHoeRNFHUzRsfnqC7i5RX4L30mlMX2UoXZHRKG2RP4Q1oW7LrLNIDoDQiuTa0TrIF/tQNRopOBN01503dY6NO6///73zTlIhAIgif4JcCi7rRwwAPTnpDF/lbR23TtKamyvh1DZsyLaAcGBV8NRZRgfAaWV0C3sHdx7PDojtTVNzbfOWaY2NepKjqSfpH089z8tUl8XcUff20euo0MY/uXi8GQ/8XZsQv+xSZ6c946579l+21Z90kv864bxnsod3R34Z75Fz7z37xwymNvshL370yOk9s6vd2yiq7CMWP3b5G2Gi9qDq9E7plR2/+pWYr72yeYHmcOS8hK8IzQiwyiCsGSpUJSlqvh9WDHQUKLg2tgne7lI3DIQnAwWqDuyMBXV0sIzu+AR4O4/2DK6KoE2k2c0EkEhQJxIsE+mWdpeONzjim/o9Ot4Uc1GfCHwelmtHyrRWek/Xe+MwX2HFgS3xQFDxUUH9ec/cJYOdvfMNrB/iX8MJ9TXCcD7o41GaxHEUxRFNo3GaxuNRXoxwOihWAkfISAI9HCAVwDHAhVpOtQSJtpuXb+Rdu9QBqFruTpR0vxT6qQ0cLCBG0MJ6G3jTjXKlBMNyox3dwe3017TB3xB9eJIt6UP8tqv43Wa1vWlnvd/rxVLxfyT/WbFaJGMW9ccxJWfjNE7PBgUdnWUUD89wlg/ThDIyKI75CPn+G7kUgR5HFwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Catalog Task">af51fd0e73141300612c273ffff6a785</action_type>
+        <action_type_parent display_value="Create Catalog Task">f597c41073081300612c273ffff6a767</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>af51fd0e73141300612c273ffff6a785</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <generation_source/>
+        <order>18</order>
+        <parent_ui_id>9c2fd6e9-9f09-46fb-8c35-3b5490f58d4a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>d5b4e3e733d196109b1810919e5c7b7a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:17</sys_updated_on>
+        <ui_id>9dbe5c2a-b665-44ab-b94e-a43a60044b28</ui_id>
+        <values>H4sIAAAAAAAA/+1Y32/iOBD+V6I83UmITQIFtm+99nqqdNeVStV7WPYix5mAtU6ctR1YDvG/3zhO+A0LKl1xUnljPLa/+Wa+SSafZy6hmonsIVOaZBT6U/UQu9du0vVJx6dXfpR87HWuvE4AVx7EAY3bEY2SyG24zPiR5MpPYg+6Lb/ttzyv4wc06LYS/HVIt9dDv4ykYDxHoSYRh7D833DHhBfGrija1Ve0xEzlnExfthboiPFYQuZef/7ScHMi8QQN0r2ebSwdC4mTCDi6PhtAzqMFtAennubGvGX7c9cZQsYGl9dw4buGLAYElBCuoOGmJIuJFnK6sEgg8aeMo0HLAv+PWKbxQNf4flfsX7y25xm3BDBCCnZt8be8+M5yZpeSO6JJHw+jupCVOx0JRkFZfmJISMH17arNOnzKTRXYLWWo1W7BizR7tMy4iwO2U1Qt3O1LYaEgjCE3lJggKwaS/khMnuqA7llWslctckEJX/wjWksWFdrAnrlMhYpKltdQSye8BjikeEGYkjxn2TDMpRiz8lAMJW0OOf5pJlxMEIxiw6xpq7+JmSHNe7TfleYXIpk5+S88Bjfj7dzsKcNBszL1gClz5w1XTdUtJ0otOcIEhd8KA90yVgUdWnrNlhL5Dd48hiq+eeO1Quy2DlU98dYKXMK3ApSGOGQa0hUxzmaqiAw/Tcl0Op9vq/JkOR4BrJbjUw3LebCwDiCuZLkUx7oqn1bslSj9w6K0GlxqsvLYIcpWsC5KLAuEVwPbp8+t4H66Ws8hw6QPRNLRPQNukpsVaWQFsibPt5KhwMyEsRR5XgV9aSpsdQ8We2etptVISG0YKJGYhO4SIgJBL4X0ZsP5fGkfSlHkTXPaLpmevP80UR8RZy3qvonSuVuL8jAHlbQt5A1d92tjJergxCftflX7gedd9tP2/I/Rt9HpBemxe7hO6VotJqapqRURrpTloPC8VnyTOSClkI6gFHMeO5MRZA5yCil6ZUNHC4fE8QcJqRiDQxzMl3QSKVJHj5hyrOac380FRIPDEmtHFRQ8diJwkPacg3lKYBUjXXz6D9KIHJd5KvdbKLNBLfmBez1wb/4I+yDHWFuPJitj4CI3W56BpAO3MbAxla6k3e11euSjH7Wjlue3O0EQtQJCPWK481ulOyYwZPGR/jv6zzt1x1N34vvUj0u6br33dUHvqPF6rEH6OfIZ2prfGG2qReelWqyabutsTRelu9l0lzPDvt57i92Hi6HzbN0uoA/bd8f/fRtmWV5o1VyfgN+qNScH6zgK1sp2QpheaczedsOpJ8DTxHQEiFpMf1sIW5gqIUVCcCDZpoKwMD7cV9Aq9bTPpp72Zb+vlC/n+z4NVIvvLzRnVc3K97ZFZ6e2XW6O+mcY7Y8AwzcfJXXzXp/w94E9fcq/Opu6doz5iO5HY/5GfBfwcHr9kG+/bf6cER/f5yahKu+/wPm+Gx2s+JXPyHUhj6sA1XmldwSQWnp1Rb6sIDkAsp6+eaFGUUG/gt4QXd+sOL/VS5XuOu+D+Ou+ZyfcDEPZMhdhBlCy+eZft1lGeRFDmGKMTOL2BQbQi2/dNuaV00GGE2mPWLgoUUgKYU2l6ZWhKDnGaCZurUpcmiTLW3759Ywa//IfBCUcENQaAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Catalog Task">af51fd0e73141300612c273ffff6a785</action_type>
+        <action_type_parent display_value="Create Catalog Task">f597c41073081300612c273ffff6a767</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>af51fd0e73141300612c273ffff6a785</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <generation_source/>
+        <order>15</order>
+        <parent_ui_id>b4709833-ce49-4f13-917c-631e832a4d38</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>d9b4e3e733d196109b1810919e5c7b75</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+        <ui_id>44928ba4-5c3b-477a-90fa-49ef5efa4a04</ui_id>
+        <values>H4sIAAAAAAAA/+1Y227bOBD9FUFPu4DhlXxN8pZNkEWA3WQRd9OHuhUoaRQTpUSVpOK6hv99h6Tki3yJjTiFCyRP0XA4PHM5HHM+TV0SKcqz20wqkkUwmMjb2L1wSeiTnh91/TA5P+t1vV4Luh7ErSjuhFEIsdtwqdFLun4Se9Bv+x2/7Xk9vxW1+u0E/3qkf3aGehlJQWuOAkVCBoH5brjPhBVaLiOUy68oianMGZk8ri1EI8piAZl78elzw82JQAsKhHsxrS3tC4mREBiqftCAnDsLaAtONcm1eE329yYbXMQal9dw4buCLMZAXSSESWi4KclioriYzCUCSHyfMRQoUeD3iGYKDbpa97ukP/DYM0+rJYAeRmDX5p/m4GsbM7uUXBNFBmgsUoUo1aMRpxFIG58YElIwdbUsswr3ua4Cu8W4Wu7mrEizOxsZd25gPUXlwvW2FBYSghhyHRLtZBmBZDDi44fKoRuameiVi4xHhM2/iFKChoXSsKculYGMBM0rqEYJjwEGKR4QpCTPafYU5II/U2MUXUmbTww/mgnjYwQj6VPWtNXfxMyQ5g3Kr434kQiqLf+DZnAzns70HuMOiqWuB0yZO2u4ciKvGJFyESNMUPCt0NBtxEqnAxtevcUgv8STn6H0b9Z4LRH77V1VT7yVAhfwrQCpIA6ognSJjNOpLEIdn6agKp3N1ll5MB33AFbR8aGC5dxaWDsQl7RckGOVlQ9L8pKU/m5SWg4uOFlqbCBlu7VKSiwLhFcB28bPNed+OluPQcNkAEREoxsKTCc3K9LQEmSFnm9FQ46ZCWLB87x0+tRY2O7vLPbeSk3LERdKR8Ag0QndREQEgloSw5s9zWYL+ZPgRd7U1jbR9OD9h5F6Dz8rUg+0l871ipe7Y1BS20Ku8XpQCUtStw7stNtZ7bc877S77fHb6Nvw9IT42N9dp9FKLSb6UpNLJEQH0DvsOYoPC89rx9NhxbOhezF0B3f3HwcPj1jcJnASgYIYuo2htWB0ej3S8TtRyw/7va7ve2cIutNO2lFkkLaMuqkBo46BCzDJ1or+oPGeZmZfLFyTUEPujZgv/woGd5eF4inBXvSv4FiaEmQNNZyf+xjbHh5Hzrv14/zzOryX9Wdflkhukf2HfjojIp0QIHOIxUSxWtnEITEy2uHCEZDyZ/w3ETx11AgcrDFhJMbH9ZvvPWm/QtIO/A35Mo2rdnNTkXgDr6unHKQYWQWB5XntOVcuOo/lYtlo2kdrNHhd1RvN4p20rd9c4Y3L+JPzwaqdQO+xv5d/+dZDs7xQsrn66n+rdpTsrOOwtVK2Y0LVUjPy1q+66tV7GJn2AFGR6aOFsIapJFLIOQOS1RmEhfHHTQmtZE/naOzpnPZvNPMg2TYOKRfff8QdlTVLM8b5zR7Z67I+3jjCOGMPMKzeSqrLe3WqsQ3s4ZON7tHYtWG0geheGm3U/DuB5vT6wYad5/6csQY+gseBNOef4EyjH+6s+KXReVXIz6WD8rjU2wNIRb2qIh+XkOwAWU0cWCFHYRF9BVUj3UCvOH9WSyXveu/Dh9fN8BO8/zB+i1wEGYCJ5ptP9GkWsSKGIEUfqcDtcwyg5vN96/OSdRDBWFgTcxXJCxFBUIVS35UBNzFGb8ZuxUpcGieLU377/Ygc//w/6iZ1/8gbAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=852aa1c51bf9865062e50ed2cd4bcbf3^sys_idNOT IN11b4e3e733d196109b1810919e5c7b6d,55b4e3e733d196109b1810919e5c7b71,55b4e3e733d196109b1810919e5c7b76,9db4e3e733d196109b1810919e5c7b49"/>
+    <sys_hub_sub_flow_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <generation_source/>
+        <order>11</order>
+        <parent_ui_id/>
+        <subflow display_value="Task Approved or Rejected or Not Required">82d3eb7f1b60555062e50ed2cd4bcbe0</subflow>
+        <subflow_inputs>H4sIAAAAAAAA/91X227bOBD9FUHPpleSRV3yFiQIEGA3XSTZvhSFMSIph7uU5EhUWq/hf+/IulhWHMduUzfoWzIakmfOzDmkPy3NooyuVPblOi00pExcc/PMpBMbPJtRO4rDwKOW5whqCe4w7kYsAmqOTFnlYWzixH5sR55F6TDP8jEvhURgpobiv2kuWJZzDD6BKqvocomnx3j6OJc6Wa3wE5fFXMHiY5OBEfYgFc9Fap59+jwy55Djjlrk5tly8OlQSAoioTD1HjEZty2mnUD1Yl4FcxELPIaJJvRns8NtL44LKlD2yBRftUi5QDQxqEKMzARSDjrLF+aZzksM5AL4h1QtuowHmeq62gS+FvJ/PHTijHrn1sDMXugeIiUua7aaYvBzfAka7vAUpsu8IzCTTBQ1SVzEUCp90Y/VCR/mWmZpvURXm28OZZkqk/SmZsjsNuk1qSzElIt5VXdVSVNWfPeQfelIupLpmqLmo8oYqF6qgJw9XEmhqjamZRJh7sgErXMZlbrCujRLef+8I3VwV0+EEgnimSYwn8t0Np3n2ZNcY8CSkvFM4T/jav4QeyFn6RhYxcEYuwXjShWX6/BHyGVFyF+4zRpUKf9J5WNZiyWahBPuuj4JwfeIG3qMhGEcECf2bJ86FlAQ5mpkFoviQkFRbGjEIqaPZUVCTWpD37TuQrWE5XKuzxHUk2iYWo1+TLJ8rz4mPclisUiX4NMsR0H8K5gW29pdE/fUcDOu00FNEZQWu7R8wIrjtH5ALa3Wz5tijCxHyXfF7C+1UX8tj4H0L9pgo3vnZ+l+j+Zf1fuyq58Q4yZLhUFIr4U916rGashVLxM2obbe/orb5+PRo7FZMemvuMk09uGxlPnWqjTT2IAu3Kx0V7uM63cqbuDAds+CT2O/L9hsN/rbHtsN/0kMFhXtMnRTEtoxENfxIxKAbRMGNIrdkAqX++/HYEPYZ0puz2DR3rRE++t8sPujfn8U29P8oy+jA4C1A/x3jcw4bwAZZPPnbYftiDK6d1Q/sLmx22grpv1e2kQOMVPbctxtO8UhGQBdD9xLFtuW/fZPqxeA/Dqtb5ozfFC18ZOo3fKCKPDcgIRBLIjr2j4By/EI5zYPBbMtyt7Rc4o6+0RFg2cyUYtp99qQWiTuzp9DwDmqJ8Gs1co4ZzhOhbH5Osuzcj6u9t39zPquXY4zkwPqHpiJWhjdI4wY11i6sW7dIQQ19lHg3KazgXvctcH2Pn0z8wgsy3q7t9jRBvFLzaCjetsLOrJPYwUinEScOoSFsU1cL2QkCgQlPkS+xUMaut47uvjp3vvVczaTLovp8NLsuYD9XNLVr4fjJfo6nlai14UxvPJfQ9tIMsoyJSAdaPIe8f5xVZG60SV9M12671uVcVN3E77cbmX79WcJd9OQbeVuteQk6oWQ2+D4QALPCohrOzYB7oTEolbocPCpiN9SvZ+/AYEthEHMFAAA</subflow_inputs>
+        <sys_class_name>sys_hub_sub_flow_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>11b4e3e733d196109b1810919e5c7b6d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:17</sys_updated_on>
+        <ui_id>85e41eb4-278b-4869-a33e-39d45bd3f5f6</ui_id>
+        <wait_for_completion>true</wait_for_completion>
+    </sys_hub_sub_flow_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <generation_source/>
+        <order>13</order>
+        <parent_ui_id>c3c0b220-db83-478d-9230-2dafa7fbcce2</parent_ui_id>
+        <subflow display_value="add/remove user from group">af8856781b64061062e50ed2cd4bcbf5</subflow>
+        <subflow_inputs>H4sIAAAAAAAA/+2WS0/jMBDHvwryOamapHn1hqhYIe0u0vK4IBQ59qS15DxwnEK36ndfu05DKG0BQVd72Eskz4w9f8/4N8rdEtVNes7Lx4uilrggcEHRGLmegwOH+E6axVHgDwMX/CFQl9BRStI0QhZi67gsivwgjJw0GA0DZysuC1VcgXNQkVNRNpVazjFv9Hq5VHkzlXew9qxWykdZXXG8uG1DlIXMGKcCCjS+u7dQhYU6TIJA4+WW671qOE6B9+RsqZOLSi8FZKCOJtCavre7fvXspaBaiGMheJJQUFAKMsxrsFCOC4plKRZoLEWjDAIwvSz4oouYsUKaG+b4qWa/VVLPtXp5x6he1ElTg0g22jrnNU45TEytVOC31p9NsMRXKiGRjejqVzICtakRhQw3XJ71bSbgspKsLMwWqU/flZ+UvMmLn6ZgqDuu1y0VnlCodDH09dq7Zlez8rGr3Dkr1nVrnbwkmPdCAQsyO2fAdT/XzbEQllKwtJFa8xI17Pp1k4xxV5uAQ67UJDmuKlZMk0qUc7ZWoC6UD6ZcLQb6HSrlNZsWA0x0LQaqgXiguZiszbdYMF2YH+oYtVlnvCnYQ2NwcUhIHDf17TiOA3tEfbCjYaA+YeZHvhdgjAGtLF3TM47r+rmI6hLJQ6NLYEraFi8x3dBbiGCVPFWi5tDWaWV9DtpQYRLvxYQGz1jo/u9kVju+BNl3aNkg24p5Ke3jwLrHBvYAqjfGfSRS/zN6iFE3dtyIxp6dQUbskU8VnuDHdop9OgrjOKWh9+8w6h3kIoufQcCUJqVIBOTlHHbCqiOMexeye+M+BvI7BG9AVnlOSnHSKd5zkRZt8+63uD7bGFuovWNBfQDmN0Fedjc+pbTXGbPa/D/ol8I7KLaa2Bk2w2u1azocK9HWyPF6M+ftWWOSt8bJyzdnfJ8eRXuGTvdiXk6c7s38nXGTeeAREtjhEFL1SwDUxkNC7SGOA+UIHCDhF46b+z92hkJryQsAAA==</subflow_inputs>
+        <sys_class_name>sys_hub_sub_flow_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>55b4e3e733d196109b1810919e5c7b71</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:17</sys_updated_on>
+        <ui_id>0862ba66-aa8a-4299-ac3d-57390db6e394</ui_id>
+        <wait_for_completion>true</wait_for_completion>
+    </sys_hub_sub_flow_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <generation_source/>
+        <order>16</order>
+        <parent_ui_id>b4709833-ce49-4f13-917c-631e832a4d38</parent_ui_id>
+        <subflow display_value="Close Task After Wait">e96467a733d196109b1810919e5c7bc8</subflow>
+        <subflow_inputs>H4sIAAAAAAAA/71V22rbQBD9lbDPktH94rcSEwgkDTRuXkIwo92VvXS1UlarJK7xv3dWUn2Jm9IHNyAEczQ7c+bMHvS4IW1XXMn69Vq1BhTl14xMSRxBlJSQhiHz88T38sLP8O3nPKZpESTEIcLm8TyJkvSjPAqYp6DimGmg/YHRC8jOhptNFOVBVkDkxjQs3ChNwc29Etwo52XMS4jAiyaXYEDWy4s5nt5u8TwTbSNh/TCWQYSuhGSaKzJ9fHJIAxr7Ga7JdPPu078SllBwianzgfExf7NubKR5ybEw5SN0M575doDXmlkavkP4m+GKcexfgmy5QypQDEyt1ztEc2B3Su6BlVBmGLCCt1b8xK5h4Bw0npKWLkZWO3QOheSzQSPMOJQP08oZxvdGd9R0eidfLShvB4kY6t5Jc3mIDQl3jRG1Go4Y2+SoP61lV6mvg1JkV+dgS13LF4w3VgY71zhkeb+qX3eaXQnVKzZ+lDUFeZDKQdPVleDS7lF1VYG5DgFjtCg6Y+luSCfmpwsawD+tiEteIZ9FBU0j1HLR6PpF9BxwpGqylBhMSjQHcm/FUk2AWhkmuDyYWNPMevgBtLCa3GKZnlQnvivx3A1eYiEtqL3oXsbwovtZ5ua+77tpnEQ+zVIeeinZOqRdt5cS2nYvIw6xeO6sCIOoo3yLYRH2CNWiMV+Q1Asfldo6/9PRZbZ3BOs09Jdi72o/Tz3X8/G58LypF0w979SzwcWtUP3Czmventtv88725E7pjibu17t4h9+cFhiNHJzNyJF3bOS/OPj8rv0cu35gyxPJj715IPqnWDMAgDyJqVtQHuGfh1EXUpq6fhikSeqFLIbgjNZ8+gUfGbiDbgcAAA==</subflow_inputs>
+        <sys_class_name>sys_hub_sub_flow_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>55b4e3e733d196109b1810919e5c7b76</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+        <ui_id>41e9ebd2-4f3c-47d7-82b4-ff69f26bd167</ui_id>
+        <wait_for_completion>false</wait_for_completion>
+    </sys_hub_sub_flow_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>37269ed7-a4f6-4cca-8058-da6abf4de0c4</parent_ui_id>
+        <subflow display_value="PROF - Ask One to Approve Task - R">1638e6b41b21e1508c5143f3cc4bcbb0</subflow>
+        <subflow_inputs>H4sIAAAAAAAA/9VTXU/cMBD8K5Wfkygfl1xybxUICaktEhy8IBRt7A1n1fnAcQ6up/vvXSfhOApCVKWq+ujxeHd21nO9ZV1fnKjm/rTuDNQcTwVbMH8eQBLwOCjKLE1iPwkx9lGEXMwKXiQJc5i0vBiiFJNiFhRhgEHsp/RkFpUR55ZXhMSroUJi9h3qXCNvtCBwDaq36HZbUut8DVpCodCDttXNGvVuRyQhu1bB5mriEsJXUgmNNVtc3zisBU21DWq22P5y9V5xCgpURL0kdZ/OH9W9KtlsWgtqLJHacJygL1OF8wOcHlhRgcPwwWAtkNSUoDp0WAW1ANPoDVsY3ROgEcRZrTZ7xkrWZpy2godO/qCmUegc9F2wbtPlVhw7gJfWv+PRsWkgui6PwcAFdeKm13sTG8mxG40SWEKvzNEhNhLOWiObenxibPHnjXmj+qr+NjrF9oUOlkXEXGBr57cTTeOVF6vmfm/WiawHq6ZL1XBQB1QEzVcnEpVd57AVh4ExWha9sWq3rJfLl3sZwdc2gworUpNX9NFkfZvb3yYHBTRQ5d0qOnjDlxTYydvaA25d8Ghn4NmUHA/w1fRfv1KZwY1eXtbyrh/DM4/mPBap787jInJnwBM3zcLIpQhBCgVHG6CdY908UtB1TybSEPldby0YLZ3My8c92Cdcy9Z8JlFrnHzaOX8WYRG+lRIxf8qDge77axGm7tYyT0tTfUhw3yHpMbhL0vQiuM+F/n5ww78VXCvsjdAux+sPDu3U9B8Etq+KIR3/QWRTzEoeBW6SisCdZQG6WTzz3Yxn88hPSo5z8YGRvfkJhcojo3cHAAA=</subflow_inputs>
+        <sys_class_name>sys_hub_sub_flow_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>9db4e3e733d196109b1810919e5c7b49</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:17</sys_updated_on>
+        <ui_id>4cd1f581-cdf6-4e01-a733-f4ad529624ef</ui_id>
+        <wait_for_completion>true</wait_for_completion>
+    </sys_hub_sub_flow_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=852aa1c51bf9865062e50ed2cd4bcbf3^sys_idNOT IN15b4e3e733d196109b1810919e5c7b4d,15b4e3e733d196109b1810919e5c7b70,49b4e3e733d196109b1810919e5c7b3a,59b4e3e733d196109b1810919e5c7b74,91b4e3e733d196109b1810919e5c7b41,99b4e3e733d196109b1810919e5c7b45,9db4e3e733d196109b1810919e5c7b48,9db4e3e733d196109b1810919e5c7b4f,c1b4e3e733d196109b1810919e5c7b3e,ddb4e3e733d196109b1810919e5c7b6b,ddb4e3e733d196109b1810919e5c7b79"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">84a42fa733d196109b1810919e5c7be5</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <flow_variables_assigned>approval_state</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id>37269ed7-a4f6-4cca-8058-da6abf4de0c4</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>15b4e3e733d196109b1810919e5c7b4d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+        <ui_id>49e96813-037f-46f8-a265-8480e8790f2c</ui_id>
+        <values>H4sIAAAAAAAA/+1VyW7bMBD9lYJny5C1eLsFCQIESBugcXMpAmFEjmyiNKmIVBLX8L93xpLtpAt66K3wTXyz8L03HGgrXBvqNviFu/BeL62Yf30cCG0Zo++tqIx7uXVLLW+sD2Al3m/8jRJzkZVKlkk+GZXpKEtm8TjBPEaVSJWVskxRUBvOg7pu3DOYgsoDoxbW+DucvlsObLeZVKMqn44iqapxlGE8imCSplGVgcqT2TjJsBq+r9/tqIPSvjawefjnRjU0RDJgI+ZbIVfaqAYP1rCmEpWc/FF7llELAyWaNzI//E1+2NSM+9Bou+zPt32T+wPoGsWk4oHA14BWIbGpwHgciDVYBcE1myPSIKg7a07ASttA3QQnv3r9ne6bxnHMmRWSQold9HhcQGnwqnO1C1VXEIDotDK0TZ8uV05L9J0/CitoTbh8i3UJd3XQznYlgRv31c60a/upc0UcGxyGSEjrsVBYs1zm34up7lfu5fOB6bW2e2f6oHESzPEEgfwr28B8tqLVi5+s7pBfzEaDa7qxWNOsCCl4YHp/C5FeD5eGDkPeD2LHuzMEyQqHNAYYXhN+tYcfoNEs9yO1oWK+7ovVTy3u10jSI4Iyn0XJdKKiDPIkgvEMIoircZqm+TjOpmI3EH7jLw14fzKKplQ8tSyzs603qOg85hLZ6DpcEKln7L3YPfKedXzO+33e7/N+/3/7rVBqTzz3w705/Mk5sKG3yYt+gl5c840VnrDdD9UQCHcTCAAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">dca46fa733d196109b1810919e5c7b01</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>12</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>15b4e3e733d196109b1810919e5c7b70</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+        <ui_id>c3c0b220-db83-478d-9230-2dafa7fbcce2</ui_id>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPxvijCWveSkJh0K2wlr5sxVxLciImS54kJ/VM/vuuLMcJbcYW6OPerCPdq3OO7sE90a1rWmcf9Y21Yq3I4ttzRITyGH73REHNyYJQrZhwQqtiACKyBdn6DfxkwjYSuqcjQjdCMsPHbg0YrHHckEX/akswLKgSqNJrmtI8m+dZkmQfr9JynpdpxnLgkGNDCSWXeHR5oPHhbkCiP/JzXeNx64xQ63F9N3Z5OIDaMM8qTSLCXxxXjCOfCqTlEalBMXDadBNiOLB7JY/ARigXBNfwYsUvvDCbzfzBiqNEOroxLR+hlHwV3Apb1QocIJ2WutZM5mlBuQ0GMV5BK93yFAsH7hsvN5Q433is1rKt1ZfgCpkanDxOa3nBeOPVevqjlupho3dfD0xvhRqcGTelpiCnFTj0r2yd59MTLnmNjYoamgZdLRqjt2IoRi51vJa4iCupd3ipn7AYqCceo7kQ3yK+GuAnMMKr+IxtsDjQLMEKWgzTiO3QJk72EbGdXUqw9igSHS5+tp5ikDyKK4I/voQa0bgbvHnLRx376O1wn8x13w+ctyOtGGmhMJCFdeD4fv+9TZKcBRSn5k0KLq6/LDPXMKtmaTI7n5mr+bnMnEnLhUHJ/hIU/0L/mJMkSf4H5V2CImwRxnvUNlz+jjl59qEId05eU2GR2vBMnw7/Cr/R4YAJegrttPnhRR2x/W8+SyetdQYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">80a42fa733d196109b1810919e5c7b96</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>49b4e3e733d196109b1810919e5c7b3a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+        <ui_id>cd341a0e-cd31-411d-8ee7-d3441679589a</ui_id>
+        <values>H4sIAAAAAAAA/+1VyW7bMBD9FZdnQZCl2GhyC2wEKJA2QBPk0gbCiKRsohSpcvFSwf/eoSgvSNw2AXLszXyzvTeaB3dEe9d6Zx/0tbViocjVt6eECBUw/N0RBQ0nV4RqxYQTWpU9kJAVSB8Coh41oGDBzYhvhMWqhDBhWwnbx7+k0KWQzPBhXgsGuzpuyFX3LCQYdqgzqMeXdEyLfFrkWZZ/vBhX06Ia56wADgU2lFBxiamzPdHRbY8kf1Tgtm3ArTNCLYb37dDlfg9qwwKrcZYQvnFcMY58apCWJwRFMXDabA+I4cDulDwCS6EctiMheWPFLxyYTyYhseYokfIYPDwfoJJ8HtcXQ/UcHCAdT503QzpdakG5jQtivAYv3ewUiwl3bZAbS1xoPFRr6Rv1JW6FHBrsvxYi3vKS8TaoDfQHLfX9Uq+/7pneCNVvZghKTUEeXuBwf5V3gU9HuOQNNiobaFvcatkavRJ9MXJp0oXER1pLvcah4QZToIF4isuF9AbxeQ8/ghFBxWdsg8WRZgVW0LK/V2yHa+JklxC7tTMJ1h5F4obLnz5QjJIHcWXcTyihRrTuGiev+KBjl7w8/5PL7zrrq0A7XRjt23S48d3uw3efZQV7aYRXVLzNF5cwqSfjbHLeFxfTc74444g3miH/hxnCV3ilF7Is+2+GdzGDsGU84UFbP/wdvfAUDj/OPOyaCovU+s/0af+PEQJbPDBBT6G1Nj+CqCO2+w3sdTxjewYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">d0a46fa733d196109b1810919e5c7b14</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>14</order>
+        <outputs_assigned/>
+        <parent_ui_id>c3c0b220-db83-478d-9230-2dafa7fbcce2</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>59b4e3e733d196109b1810919e5c7b74</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+        <ui_id>b4709833-ce49-4f13-917c-631e832a4d38</ui_id>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPjvFH7CV5KwmFQbfCWvqyFXMtyYmYbHmWnDQz+e+7shwntBlbIY97s4507z3nSAd3RLWmbo1+VDdai3VFFt+ePSIqi+F3RyooOVkQqiomjFBV1gMe2YJs7QZ+MqFrCfunE0I3QrKGD91qaLDG8IYsuldbgmFBEUARzmlI4yiNoyCIZtMwT+M8jFgMHGJsKCHnEo8ujzQ+3PWI90d+Zl9bXJtGVOthfTd0eTiCqmGWVRh4hL8YXjGOfAqQmnukhIqBUc1+RBoO7L6SJ2AjKuMEl/CixS8cGCWJPVhwlEgHN8blI+SSr5xbbqtYgQGk01LTNqN5SlCunUGMF9BKszzH3IH72sp1JcY2HqqVbMvqi3OFjA3OLqfVPGO8tmot/UFL8bBRu69Hprei6p0ZNqWiIMcVGPQvb43l0xEueYmNshLqGl3N6kZtRV+MXEp/LXHhF1LtcKh9YT5QS9xHc8G/RXzVw0/QCKviM7bBYkczBy1o1r9GbIc2cXLwiN7rpQStTyLR4exnayk6yYO4zPljS2gjanODk7d80HHw3j7us3fddcEsjXJI0wnADCbTaD6fAI3ZJPkYzwOWpzyeT30Xn0y3FK9HHw7f2yCIWc/0TTCu0fJ9yZpDUiRhkFxO1jS9lKwLmXpnnKK/xMlK+cc0BUHwP05XiZPQmQvBoK0ffsU0PdvouJmj11RopNZf06fjH8Vu7PGBCXoO7VTzw4o6YYfftkSLtZsGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">40a42fa733d196109b1810919e5c7ba1</block>
+        <comment/>
+        <connected_to>cd341a0e-cd31-411d-8ee7-d3441679589a</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>91b4e3e733d196109b1810919e5c7b41</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+        <ui_id>6e136067-8d3a-4690-9725-0c652940b66b</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">4ca42fa733d196109b1810919e5c7ba7</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <flow_variables_assigned>approver</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>6e136067-8d3a-4690-9725-0c652940b66b</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>99b4e3e733d196109b1810919e5c7b45</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+        <ui_id>4ef8b85f-ad58-4eef-86bb-497d914f46d4</ui_id>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8F54twbIs2/ItSBAgQNoAeV2KQliSK5soRSp8xFEN/3tJSbEdtMi9QG7ScLk7O6OB9kR713pnH/WFtWKjyPrHzwkRKmLheU9qqXe3eiPYjbIOFMOHzt5wsiblEjLIWJlRWq4WxXQxw2KKfMb4nDJKCxLaxDpoW6Nf0YR3BQ1+RF5B+gjt9+W8hiXNMVmsOEvmdZYlK8rypFgt5zzLWLHkLL1Hpg1P9U4hr2h3OIQWXNhWQvc8dgpICyYMcmHAek/YVkhu8H2xyGhaf8a8XIYWEijKUHrxGXnXtRExWGMYwHCEbse792d4YB3pTCcE3xwqjoFHDdLihDSgODhtuiNiEPidkidgK5QbVmvgzYrfYWo+m5wNXhPb2crbntYRfgQq8WqQJ5Q8Dcf1FTh4cMYz582oGNtqwdAOGnGswUt3eY4NBXetE1oNV1xs/nEw09I36vugEzk2OnMmFFYc2yhA3Ghcr37Y6t1RrWuheq3GQ6kZyLNSBMO21wJldLL3ZELAOSOod5Htnnjx+LcxA/gva1BiE9hUTXBWqE0V7RU9g7BQk25keEljCgLzmJAUWFQhDaZBeh3wqx5+BiOiJN9Cm14NL56UePHYh6WgU6CzKUsAyiKZFzlPaJnlSV4sC+B0kcOck8MkqnkpwdqTiGGJ6sVHCQZJR/GqwYd4hRnRuotA6hVHnQ4/Y7IGPl8p/krxV4r/1xRzZMIGnv1HcPP+V44HXVAtxvkE7bT5FTc8YYc/e/Pz0N8HAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">4ca42fa733d196109b1810919e5c7bac</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>9db4e3e733d196109b1810919e5c7b48</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+        <ui_id>37269ed7-a4f6-4cca-8058-da6abf4de0c4</ui_id>
+        <values>H4sIAAAAAAAA/+1VTWsbMRD9K0XnxexHbBrfjE2gkDbQhFzasMxKWltUK231Ycdd/N87Wq3XpnFJAzn2tnqjmXnvaYbtiPau9c4+6IW1Yq3I/NtTQoQKGH53REHDyZxQrZhwQquyBxKyBelDAD+ZsK2E/eMJoRshmeFDtRYM5jhuyLz7IyQYJtQp1Nk1zWiRz4o8TfOPV1k1K6osZwVwKLCghIpLvLo80vhw2yPJX/m5fRtw64xQ6+F8O1S5P4LasMAqSxPCnx1XjCOfGqTlCWlAMXDa7EfEcGB3Sp6AjVAuCm7g2Ypf2DCfTsPFmqNEOrgxHh+gknwV3YqhegUOkI6nzpvRPC0ot9Egxmvw0i3PsXjhrg1yY4oLhYdsLX2jvkRXyFjg7HG85SXjbVAb6A9a6vuN3n09Mr0RqndmCEpNQY4ncOhf5V3g0xEueYOFygbaFl0tW6O3ok9GLs1kLfEwqaXeYdMwYROggfgEzYXJDeKrHn4EI4KKz1gGkyPNCqygZT+NWA5t4uSQELu3SwnWnkSiw+VPHyhGyYO4MvoTUqgRrVtg5y0fdBySl8N9NtddZ30VaE+AsdLwRm/54fDdp2nBFoy9HPvXE962FdcwradZOr28FVezS1txYR/euAr5K6sQ3uAfNyFN0/+r8C6rIGwZB3jQ1jd/x014CmMfe45eU2GRWv9Mn45/gxDY44AJeg7ttPkRRJ2ww2+85UUJVwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">04a42fa733d196109b1810919e5c7bea</block>
+        <comment/>
+        <connected_to>37269ed7-a4f6-4cca-8058-da6abf4de0c4</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>9db4e3e733d196109b1810919e5c7b4f</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+        <ui_id>3278565d-c915-422b-b306-d1bb580f5059</ui_id>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">88a42fa733d196109b1810919e5c7b9c</block>
+        <comment>set manager as approver</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <flow_variables_assigned>approver</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id>cd341a0e-cd31-411d-8ee7-d3441679589a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>c1b4e3e733d196109b1810919e5c7b3e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+        <ui_id>c0ee829a-e1d4-47bd-90b2-7666224a8fd6</ui_id>
+        <values>H4sIAAAAAAAA/+1VTW/iMBD9Lz5DxFdg4YaKkJC6W2mhvayqaGJPwFrHTv0BZRH/fcdJClRd9byH3pLn8cyb9/KUEzPBV8G7jZk7J7eazX49d5jUEaPnEyuUOdybreQr7TxojuujWwk2Y3wCfejzaT/Pp9/GaW88wLSHYsDFKOc5jBi1iXVQVdbs0dK7hhLfI3tQIUKnkwt5HJVsrQlVUoKGLdrzmWqEdJWC41NbSkgFljp56jA7Mb6TSlh8Yx5H9orPqE0n1EJBjopK55+x88cqIhYLpAEcW+i+vfvzBjdWRDq9DsNXj1og8ShAOeww2kWAN/Z4QSyCeNDqCuyk9s1qJbw6+YemDgedm8Ez5o4uC66mdYE3kCtcNPJQyWNzXCzAw9rbwH2wrWJ8ZyRH12gksICg/N0t1hQ8VF4a3Vzxsfn7wdyoUOofjU7s0ujGGSrMBFZRgLhRu16x3pnDRa2l1LVW7aEyHNRNKYLlu6VEFZ2sPekw8N7KPPjI9sSC3Hw0pgH/ZQ0qLIlNVpKzUm+zaK+sGdBCZbJV9JLEb4+YxwgkwKMKCZkGyZLwRQ0/gZVRku/UplYjyEctXwLWaUjzHuSDHu8CTNPuKB2Kbj7tD7vDdJKCyMdDGAl27kQ17xQ4dxWRlsheQpSgkbQVL2t8iFe4lZWfE6k9tjqdn2N0Gj5fMf2K6VdM/9uYCuTSEc/6I1i9/VfjwZFUi3m9Qgdjf8cNr9j5LzRnlXehBwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">44a42fa733d196109b1810919e5c7bef</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <flow_variables_assigned>approval_state</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>10</order>
+        <outputs_assigned/>
+        <parent_ui_id>3278565d-c915-422b-b306-d1bb580f5059</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>ddb4e3e733d196109b1810919e5c7b6b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+        <ui_id>ccf5d1e7-4e8b-4c37-8231-026b17f6d8cb</ui_id>
+        <values>H4sIAAAAAAAA/+1VS2/aQBD+K9WeATnGPG9RUCSktJEKzaWKrPHuGFZd7zr7CHER/72z2EDUtOqxF27eb17ffDMj75kJvg7erc2tc3Kj2fz7c49JHTH63rNSmd2D2Ui+1M6D5rhq3FKwOUuGghfpaHJTDG+ydJaMUxwlKFIusoIX2ZhRmugHdW3NK6icwj0SqqHCP+H0HS4GFAQJ6WoFzdNHSw2W0ni0bL5nfCuVsHgiH6sWKPjk7+wySqGgQPWOyKd/EfRNHXHnrdSb7v3QJVmdQGNFJJX0GL551ILYzktQDnusAi3AG9ucEYsgHrW6AFupPWVj0fnNyZ9Ub5okSfQskTrk2FrPzzUUChetTK2pXIAHohO4D7Zz51sjObpWH4ElBOXv3mOtw2PtpdFtiI+Ju2ijQqW/tKqwc4LTVAgJDnOBdWw38u+aKVdbs/t6Ynov9VGZzqgMB3V+gSf9iuAjnz0Lcv2b1C3yQWxUWFHFvKJZEZLHgcljFSJdDTaKHoO4wcQubvcAeOxwQGOAwT3hiyP8BFbGdj9TGgqO5b5p+RLwuOiclgiK0ayfTiein8Eo7cN4Bn1IyvFwOByNk2zKDj3mGnenwLmLUDSl/CXENlvZOoHyVuMYwq2s/S2ResVOi8NzvISWz/UCrxd4vcD/cYECuXTE8zjc5elvGA0N7WY8xQu0M/ZH7PCCHX4BoHyfl1cHAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">9ca46fa733d196109b1810919e5c7b45</block>
+        <comment/>
+        <connected_to>b4709833-ce49-4f13-917c-631e832a4d38</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else If">666e5545c3e232002841b63b12d3ae99</logic_definition>
+        <order>17</order>
+        <outputs_assigned/>
+        <parent_ui_id>c3c0b220-db83-478d-9230-2dafa7fbcce2</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-10-23 17:35:17</sys_created_on>
+        <sys_id>ddb4e3e733d196109b1810919e5c7b79</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+        <ui_id>9c2fd6e9-9f09-46fb-8c35-3b5490f58d4a</ui_id>
+        <values>H4sIAAAAAAAA/+1VXWvbMBT9K0PPjvFH4iV5KwmFQbfCWvqyFXMtyY2YbHmSnDQz+e+7shwntB3bWB73Zh3pXp1zdA/uiGpt01pzr66MEU81WX55DIioHYbfHamh4mRJqKqZsELVeQ8EZAuydRv4yYRpJOwfTgjdCMk0H7o1oLHGck2W3YstwbCgjKCMFzSmaZKlSRQl82lcZGkRJywFDgk2lFBwiUdXRxrvbnok+CU/u28cbqwW9dOwvhm63B1BpZljFUcB4c+W14wjnxKk4QGpoGZgld6PiObAbmt5Ajaitl5wBc9G/MALk9nMHSw5SqSDG+PyHgrJ194tv1WuwQLSaalt9WieEpQbbxDjJbTSrs4xf+C2cXJ9iXWNh2ol26r+5F0hY4Ozx2kNzxlvnFpHf9BS3m3U7vOR6bWoe2eGTakoyHEFFv0rWuv4dIRLXmGjvIKmQVfzRqut6IuRSxU+SVyEpVQ7vNRNWAjUEQ/RXAivEV/38ANo4VR8xDZY7GkWYATN+2nEdmgTJ4eAmL1ZSTDmJBIdzr+3jqKXPIjLvT+uhGrR2Cu8ecsHHYfg9XCfzXXXRfMsKSDLJgBzmEyTxWICNGWT2ft0EbEi4+liGvr45Kal+DzmcPjaRlHKXofiX9tdNFHxW4l6I0t/GaPkNzFy7/eHKYqi6H+MLhIjYXI//IO2/vILpujRRcbfOXpNhUFq/TN9OP5J3MYeB0zQc2in9Dcn6oQdfgIo2TfFkwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=852aa1c51bf9865062e50ed2cd4bcbf3"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=852aa1c51bf9865062e50ed2cd4bcbf3^sys_idNOT IN512ae1c51bf9865062e50ed2cd4bcb60,d9ec36571b31429062e50ed2cd4bcb9b"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=5b0ab20c-aa95-453d-b913-3575adb63a4d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_user</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>approver</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Approver</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</model>
+        <model_id>852aa1c51bf9865062e50ed2cd4bcbf3</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_user">sys_user</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:14</sys_created_on>
+        <sys_id>512ae1c51bf9865062e50ed2cd4bcb60</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c71bab59-287d-4a52-a69a-a0f633356048</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>approval_state</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>approval state</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Api Connect add/Disable Master Subflow">852aa1c51bf9865062e50ed2cd4bcbf3</model>
+        <model_id>852aa1c51bf9865062e50ed2cd4bcbf3</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-05-01 20:23:06</sys_created_on>
+        <sys_id>d9ec36571b31429062e50ed2cd4bcb9b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="APi Connect Development Request">a68681601be9a15062e50ed2cd4bcb9f</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:35:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3^sys_idNOT IN152ae1c51bf9865062e50ed2cd4bcb4a,1d2ae1c51bf9865062e50ed2cd4bcb55,812ae1c51bf9865062e50ed2cd4bcb07,c12ae1c51bf9865062e50ed2cd4bcb3f,cd2ae1c51bf9865062e50ed2cd4bcb0e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>user</element>
+        <help/>
+        <hint/>
+        <label>user</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:13</sys_created_on>
+        <sys_id>152ae1c51bf9865062e50ed2cd4bcb4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-04-24 14:35:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>add_remove</element>
+        <help/>
+        <hint/>
+        <label>Add/Remove</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:14</sys_created_on>
+        <sys_id>1d2ae1c51bf9865062e50ed2cd4bcb55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-04-24 14:35:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>ritm</element>
+        <help/>
+        <hint/>
+        <label>RITM</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:13</sys_created_on>
+        <sys_id>812ae1c51bf9865062e50ed2cd4bcb07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-04-24 14:35:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>group</element>
+        <help/>
+        <hint/>
+        <label>group</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:13</sys_created_on>
+        <sys_id>c12ae1c51bf9865062e50ed2cd4bcb3f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-04-24 14:35:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>start_string</element>
+        <help/>
+        <hint/>
+        <label>start string</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:13</sys_created_on>
+        <sys_id>cd2ae1c51bf9865062e50ed2cd4bcb0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Global" source="global">global</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-04-24 14:35:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3^sys_idNOT IN552ae1c51bf9865062e50ed2cd4bcb51,912ae1c51bf9865062e50ed2cd4bcb53,dd2ae1c51bf9865062e50ed2cd4bcb53"/>
+    <sys_choice field="add_remove" table="var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>add_remove</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>-- None --</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>John.Schwab</sys_created_by>
+            <sys_created_on>2024-04-24 14:35:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>552ae1c51bf9865062e50ed2cd4bcb51</sys_id>
+            <sys_mod_count>13</sys_mod_count>
+            <sys_updated_by>John.Schwab</sys_updated_by>
+            <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+            <value/>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>add_remove</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Add</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>John.Schwab</sys_created_by>
+            <sys_created_on>2024-04-24 14:35:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>912ae1c51bf9865062e50ed2cd4bcb53</sys_id>
+            <sys_mod_count>13</sys_mod_count>
+            <sys_updated_by>John.Schwab</sys_updated_by>
+            <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+            <value>Add</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>add_remove</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Remove</label>
+            <language>en</language>
+            <name>var__m_sys_hub_flow_input_852aa1c51bf9865062e50ed2cd4bcbf3</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>John.Schwab</sys_created_by>
+            <sys_created_on>2024-04-24 14:35:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dd2ae1c51bf9865062e50ed2cd4bcb53</sys_id>
+            <sys_mod_count>13</sys_mod_count>
+            <sys_updated_by>John.Schwab</sys_updated_by>
+            <sys_updated_on>2024-10-23 17:37:23</sys_updated_on>
+            <value>Remove</value>
+        </sys_choice>
+    </sys_choice>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_852aa1c51bf9865062e50ed2cd4bcbf3"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_852aa1c51bf9865062e50ed2cd4bcbf3"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>b7106d451bb9865062e50ed2cd4bcb04</sys_id>
+        <latest_snapshot>852aa1c51bf9865062e50ed2cd4bcbf3</latest_snapshot>
+        <compiler_build>glide-xanadu-07-02-2024__patch2-09-25-2024_10-06-2024_2304.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=b7106d451bb9865062e50ed2cd4bcb04"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=b7106d451bb9865062e50ed2cd4bcb04^sys_idNOT IN1e2a25c51bf9865062e50ed2cd4bcb8b"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"1e2a25c51bf9865062e50ed2cd4bcb8b","name":"plan","plan_signature":null}}</plan>
+        <plan_id display_value="Api Connect add/Disable Master Subflow">b7106d451bb9865062e50ed2cd4bcb04</plan_id>
+        <snapshot>0ee523eb33d196109b1810919e5c7b6f</snapshot>
+        <sys_created_by>John.Schwab</sys_created_by>
+        <sys_created_on>2024-04-24 14:35:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1e2a25c51bf9865062e50ed2cd4bcb8b</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>John.Schwab</sys_updated_by>
+        <sys_updated_on>2024-10-23 17:37:25</sys_updated_on>
+    </sys_flow_subflow_plan>
+</record_update>
